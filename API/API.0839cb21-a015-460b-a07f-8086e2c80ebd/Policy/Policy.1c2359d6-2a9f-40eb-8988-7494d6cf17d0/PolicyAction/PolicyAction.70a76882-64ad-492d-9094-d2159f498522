@@ -1,0 +1,17 @@
+{
+  "id" : "70a76882-64ad-492d-9094-d2159f498522",
+  "names" : [ {
+    "value" : "Straight Through Routing",
+    "locale" : "en"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "templateKey" : "straightThroughRouting",
+  "parameters" : [ {
+    "templateKey" : "endpointUri",
+    "values" : [ "http://webm101.prudhvi.com:5555/address/${sys:resource_path}" ]
+  } ],
+  "active" : false
+}

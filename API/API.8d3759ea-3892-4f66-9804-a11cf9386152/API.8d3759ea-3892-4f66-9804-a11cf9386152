@@ -1,0 +1,1071 @@
+{
+  "type" : "SOAP",
+  "apiDefinition" : {
+    "type" : "soap",
+    "wsdl" : "<wsdl:definitions xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\" xmlns:soapjms=\"http://www.w3.org/2010/soapjms/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\" xmlns:tns=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" name=\"math\" targetNamespace=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <wsdl:types>\n    <xsd:schema targetNamespace=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n          <xsd:element name=\"absoluteValueInput\" type=\"tns:absoluteValueInput\"/>\n          <xsd:element name=\"absoluteValueOutput\" type=\"tns:absoluteValueOutput\"/>\n          <xsd:element name=\"addFloatListInput\" type=\"tns:addFloatListInput\"/>\n          <xsd:element name=\"addFloatListOutput\" type=\"tns:addFloatListOutput\"/>\n          <xsd:element name=\"addFloatsInput\" type=\"tns:addFloatsInput\"/>\n          <xsd:element name=\"addFloatsOutput\" type=\"tns:addFloatsOutput\"/>\n          <xsd:element name=\"addIntListInput\" type=\"tns:addIntListInput\"/>\n          <xsd:element name=\"addIntListOutput\" type=\"tns:addIntListOutput\"/>\n          <xsd:element name=\"addIntsInput\" type=\"tns:addIntsInput\"/>\n          <xsd:element name=\"addIntsOutput\" type=\"tns:addIntsOutput\"/>\n          <xsd:element name=\"addObjects\" type=\"tns:addObjects\"/>\n          <xsd:element name=\"addObjectsResponse\" type=\"tns:addObjectsResponse\"/>\n          <xsd:element name=\"divideFloatsInput\" type=\"tns:divideFloatsInput\"/>\n          <xsd:element name=\"divideFloatsOutput\" type=\"tns:divideFloatsOutput\"/>\n          <xsd:element name=\"divideIntsInput\" type=\"tns:divideIntsInput\"/>\n          <xsd:element name=\"divideIntsOutput\" type=\"tns:divideIntsOutput\"/>\n          <xsd:element name=\"divideObjects\" type=\"tns:divideObjects\"/>\n          <xsd:element name=\"divideObjectsResponse\" type=\"tns:divideObjectsResponse\"/>\n          <xsd:element name=\"maxInput\" type=\"tns:maxInput\"/>\n          <xsd:element name=\"maxOutput\" type=\"tns:maxOutput\"/>\n          <xsd:element name=\"minInput\" type=\"tns:minInput\"/>\n          <xsd:element name=\"minOutput\" type=\"tns:minOutput\"/>\n          <xsd:element name=\"multiplyFloatListInput\" type=\"tns:multiplyFloatListInput\"/>\n          <xsd:element name=\"multiplyFloatListOutput\" type=\"tns:multiplyFloatListOutput\"/>\n          <xsd:element name=\"multiplyFloatsInput\" type=\"tns:multiplyFloatsInput\"/>\n          <xsd:element name=\"multiplyFloatsOutput\" type=\"tns:multiplyFloatsOutput\"/>\n          <xsd:element name=\"multiplyIntListInput\" type=\"tns:multiplyIntListInput\"/>\n          <xsd:element name=\"multiplyIntListOutput\" type=\"tns:multiplyIntListOutput\"/>\n          <xsd:element name=\"multiplyIntsInput\" type=\"tns:multiplyIntsInput\"/>\n          <xsd:element name=\"multiplyIntsOutput\" type=\"tns:multiplyIntsOutput\"/>\n          <xsd:element name=\"multiplyObjects\" type=\"tns:multiplyObjects\"/>\n          <xsd:element name=\"multiplyObjectsResponse\" type=\"tns:multiplyObjectsResponse\"/>\n          <xsd:element name=\"randomDoubleInput\" type=\"tns:randomDoubleInput\"/>\n          <xsd:element name=\"randomDoubleOutput\" type=\"tns:randomDoubleOutput\"/>\n          <xsd:element name=\"roundNumberInput\" type=\"tns:roundNumberInput\"/>\n          <xsd:element name=\"roundNumberOutput\" type=\"tns:roundNumberOutput\"/>\n          <xsd:element name=\"subtractFloatsInput\" type=\"tns:subtractFloatsInput\"/>\n          <xsd:element name=\"subtractFloatsOutput\" type=\"tns:subtractFloatsOutput\"/>\n          <xsd:element name=\"subtractIntsInput\" type=\"tns:subtractIntsInput\"/>\n          <xsd:element name=\"subtractIntsOutput\" type=\"tns:subtractIntsOutput\"/>\n          <xsd:element name=\"subtractObjects\" type=\"tns:subtractObjects\"/>\n          <xsd:element name=\"subtractObjectsResponse\" type=\"tns:subtractObjectsResponse\"/>\n          <xsd:element name=\"toNumberInput\" type=\"tns:toNumberInput\"/>\n          <xsd:element name=\"toNumberOutput\" type=\"tns:toNumberOutput\"/>\n          <xsd:complexType name=\"absoluteValueInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"absoluteValueOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"positiveNumber\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addFloatListInput\">\n            <xsd:sequence>\n              <xsd:element maxOccurs=\"unbounded\" name=\"numList\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addFloatListOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addFloatsInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element minOccurs=\"0\" name=\"precision\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addFloatsOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addIntListInput\">\n            <xsd:sequence>\n              <xsd:element maxOccurs=\"unbounded\" name=\"numList\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addIntListOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addIntsInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addIntsOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addObjects\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:anyType\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:anyType\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addObjectsResponse\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:anyType\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"divideFloatsInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element minOccurs=\"0\" name=\"precision\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"divideFloatsOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"divideIntsInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"divideIntsOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"divideObjects\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:anyType\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:anyType\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"divideObjectsResponse\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:anyType\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"maxInput\">\n            <xsd:sequence>\n              <xsd:element maxOccurs=\"unbounded\" name=\"numList\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"maxOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"maxValue\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"minInput\">\n            <xsd:sequence>\n              <xsd:element maxOccurs=\"unbounded\" name=\"numList\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"minOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"minValue\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"multiplyFloatListInput\">\n            <xsd:sequence>\n              <xsd:element maxOccurs=\"unbounded\" name=\"numList\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"multiplyFloatListOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"multiplyFloatsInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element minOccurs=\"0\" name=\"precision\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"multiplyFloatsOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"multiplyIntListInput\">\n            <xsd:sequence>\n              <xsd:element maxOccurs=\"unbounded\" name=\"numList\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"multiplyIntListOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"multiplyIntsInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"multiplyIntsOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"multiplyObjects\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:anyType\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:anyType\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"multiplyObjectsResponse\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:anyType\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"randomDoubleInput\">\n            <xsd:sequence>\n              <xsd:element minOccurs=\"0\" name=\"fractionLength\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"randomDoubleOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"number\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"roundNumberInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element name=\"numberOfDigits\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element minOccurs=\"0\" name=\"roundingMode\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"roundNumberOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"roundedNumber\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"subtractFloatsInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element minOccurs=\"0\" name=\"precision\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"subtractFloatsOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"subtractIntsInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"subtractIntsOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"subtractObjects\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:anyType\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:anyType\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"subtractObjectsResponse\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:anyType\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"toNumberInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element minOccurs=\"0\" name=\"convertAs\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"toNumberOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"num\" nillable=\"true\" type=\"xsd:anyType\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n        \t</xsd:schema>\n  </wsdl:types>\n  <wsdl:message name=\"math_PortType_subtractObjects\">\n    <wsdl:part name=\"parameters\" element=\"tns:subtractObjects\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_roundNumberOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:roundNumberOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_divideObjects\">\n    <wsdl:part name=\"parameters\" element=\"tns:divideObjects\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_minInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:minInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_subtractFloatsOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:subtractFloatsOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_addFloatsOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:addFloatsOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_divideIntsOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:divideIntsOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_multiplyFloatListInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:multiplyFloatListInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_multiplyObjects\">\n    <wsdl:part name=\"parameters\" element=\"tns:multiplyObjects\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_multiplyFloatsOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:multiplyFloatsOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_subtractObjectsResponse\">\n    <wsdl:part name=\"parameters\" element=\"tns:subtractObjectsResponse\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_multiplyFloatListOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:multiplyFloatListOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_absoluteValueOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:absoluteValueOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_roundNumberInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:roundNumberInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_toNumberInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:toNumberInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_maxInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:maxInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_divideIntsInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:divideIntsInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_multiplyIntsInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:multiplyIntsInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_multiplyIntListOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:multiplyIntListOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_multiplyIntsOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:multiplyIntsOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_addIntsInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:addIntsInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_addIntListInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:addIntListInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_minOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:minOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_addObjectsResponse\">\n    <wsdl:part name=\"parameters\" element=\"tns:addObjectsResponse\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_addFloatsInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:addFloatsInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_addIntsOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:addIntsOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_divideFloatsInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:divideFloatsInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_multiplyIntListInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:multiplyIntListInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_randomDoubleOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:randomDoubleOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_multiplyObjectsResponse\">\n    <wsdl:part name=\"parameters\" element=\"tns:multiplyObjectsResponse\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_multiplyFloatsInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:multiplyFloatsInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_absoluteValueInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:absoluteValueInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_subtractIntsOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:subtractIntsOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_randomDoubleInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:randomDoubleInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_divideObjectsResponse\">\n    <wsdl:part name=\"parameters\" element=\"tns:divideObjectsResponse\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_addFloatListInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:addFloatListInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_addObjects\">\n    <wsdl:part name=\"parameters\" element=\"tns:addObjects\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_maxOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:maxOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_toNumberOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:toNumberOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_subtractIntsInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:subtractIntsInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_addFloatListOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:addFloatListOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_addIntListOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:addIntListOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_subtractFloatsInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:subtractFloatsInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_divideFloatsOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:divideFloatsOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:portType name=\"math_PortType\">\n    <wsdl:operation name=\"addInts\">\n      <wsdl:input message=\"tns:math_PortType_addIntsInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_addIntsOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"addObjects\">\n      <wsdl:input message=\"tns:math_PortType_addObjects\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_addObjectsResponse\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"roundNumber\">\n      <wsdl:input message=\"tns:math_PortType_roundNumberInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_roundNumberOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"addIntList\">\n      <wsdl:input message=\"tns:math_PortType_addIntListInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_addIntListOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"toNumber\">\n      <wsdl:input message=\"tns:math_PortType_toNumberInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_toNumberOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"divideInts\">\n      <wsdl:input message=\"tns:math_PortType_divideIntsInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_divideIntsOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"multiplyInts\">\n      <wsdl:input message=\"tns:math_PortType_multiplyIntsInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_multiplyIntsOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"max\">\n      <wsdl:input message=\"tns:math_PortType_maxInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_maxOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"multiplyObjects\">\n      <wsdl:input message=\"tns:math_PortType_multiplyObjects\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_multiplyObjectsResponse\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"multiplyFloatList\">\n      <wsdl:input message=\"tns:math_PortType_multiplyFloatListInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_multiplyFloatListOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"subtractInts\">\n      <wsdl:input message=\"tns:math_PortType_subtractIntsInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_subtractIntsOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"divideFloats\">\n      <wsdl:input message=\"tns:math_PortType_divideFloatsInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_divideFloatsOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"multiplyFloats\">\n      <wsdl:input message=\"tns:math_PortType_multiplyFloatsInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_multiplyFloatsOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"absoluteValue\">\n      <wsdl:input message=\"tns:math_PortType_absoluteValueInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_absoluteValueOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"subtractObjects\">\n      <wsdl:input message=\"tns:math_PortType_subtractObjects\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_subtractObjectsResponse\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"randomDouble\">\n      <wsdl:input message=\"tns:math_PortType_randomDoubleInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_randomDoubleOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"divideObjects\">\n      <wsdl:input message=\"tns:math_PortType_divideObjects\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_divideObjectsResponse\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"min\">\n      <wsdl:input message=\"tns:math_PortType_minInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_minOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"addFloatList\">\n      <wsdl:input message=\"tns:math_PortType_addFloatListInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_addFloatListOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"multiplyIntList\">\n      <wsdl:input message=\"tns:math_PortType_multiplyIntListInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_multiplyIntListOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"subtractFloats\">\n      <wsdl:input message=\"tns:math_PortType_subtractFloatsInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_subtractFloatsOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"addFloats\">\n      <wsdl:input message=\"tns:math_PortType_addFloatsInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_addFloatsOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n  </wsdl:portType>\n  <wsdl:binding name=\"APIGatewayDemo_ws_math_Binder\" type=\"tns:math_PortType\">\n    <soap:binding style=\"document\" transport=\"http://schemas.xmlsoap.org/soap/http\"/>\n    <wsdl:operation name=\"addInts\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_addInts\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"addObjects\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_addObjects\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"roundNumber\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_roundNumber\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"addIntList\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_addIntList\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"toNumber\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_toNumber\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"divideInts\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_divideInts\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"multiplyInts\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_multiplyInts\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"max\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_max\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"multiplyObjects\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_multiplyObjects\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"multiplyFloatList\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_multiplyFloatList\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"subtractInts\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_subtractInts\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"divideFloats\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_divideFloats\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"multiplyFloats\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_multiplyFloats\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"absoluteValue\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_absoluteValue\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"subtractObjects\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_subtractObjects\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"randomDouble\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_randomDouble\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"divideObjects\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_divideObjects\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"min\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_min\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"addFloatList\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_addFloatList\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"multiplyIntList\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_multiplyIntList\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"subtractFloats\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_subtractFloats\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"addFloats\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_addFloats\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n  </wsdl:binding>\n  <wsdl:service name=\"APIGatewayDemo.ws.math\">\n    <wsdl:port name=\"APIGatewayDemo_ws_math_Port\" binding=\"tns:APIGatewayDemo_ws_math_Binder\">\n      <soap:address location=\"http://webm101.prudhvi.com:5555/ws/APIGatewayDemo.ws:math/APIGatewayDemo_ws_math_Port\"/>\n    </wsdl:port>\n  </wsdl:service>\n</wsdl:definitions>",
+    "baseWsdlUri" : "/opt/api102/IntegrationServer/instances/default/temp/1530653356809/",
+    "nativeUri" : [ "http://webm101.prudhvi.com:5555/ws/APIGatewayDemo.ws:math/APIGatewayDemo_ws_math_Port" ],
+    "serviceName" : "math.api",
+    "operationsInfo" : [ {
+      "name" : "multiplyObjects",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:multiplyObjects xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>anyType</num1>\n  <num2>anyType</num2>\n</apig:multiplyObjects>",
+        "outputMessage" : "<apig:multiplyObjectsResponse xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>anyType</value>\n</apig:multiplyObjectsResponse>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_multiplyObjects",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"multiplyObjects\":{\"num1\":\"anyType\",\"num2\":\"anyType\"}}",
+              "application/xml" : "<apig:multiplyObjects xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>anyType</num1>\n  <num2>anyType</num2>\n</apig:multiplyObjects>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"multiplyObjectsResponse\":{\"value\":\"anyType\"}}",
+                "application/xml" : "<apig:multiplyObjectsResponse xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>anyType</value>\n</apig:multiplyObjectsResponse>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "multiplyObjects",
+        "invokePath" : "/multiplyObjects"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "multiplyInts",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:multiplyIntsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>string</num1>\n  <num2>string</num2>\n</apig:multiplyIntsInput>",
+        "outputMessage" : "<apig:multiplyIntsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:multiplyIntsOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_multiplyInts",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"multiplyIntsInput\":{\"num1\":\"string\",\"num2\":\"string\"}}",
+              "application/xml" : "<apig:multiplyIntsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>string</num1>\n  <num2>string</num2>\n</apig:multiplyIntsInput>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"multiplyIntsOutput\":{\"value\":\"string\"}}",
+                "application/xml" : "<apig:multiplyIntsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:multiplyIntsOutput>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "multiplyInts",
+        "invokePath" : "/multiplyInts"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "randomDouble",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:randomDoubleInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <!--Optional:-->\n  <fractionLength>string</fractionLength>\n</apig:randomDoubleInput>",
+        "outputMessage" : "<apig:randomDoubleOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <number>string</number>\n</apig:randomDoubleOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_randomDouble",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"randomDoubleInput\":{\"fractionLength\":\"string\"}}",
+              "application/xml" : "<apig:randomDoubleInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <!--Optional:-->\n  <fractionLength>string</fractionLength>\n</apig:randomDoubleInput>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"randomDoubleOutput\":{\"number\":\"string\"}}",
+                "application/xml" : "<apig:randomDoubleOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <number>string</number>\n</apig:randomDoubleOutput>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "randomDouble",
+        "invokePath" : "/randomDouble"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "multiplyIntList",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:multiplyIntListInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:multiplyIntListInput>",
+        "outputMessage" : "<apig:multiplyIntListOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:multiplyIntListOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_multiplyIntList",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"multiplyIntListInput\":{\"numList\":\"string\"}}",
+              "application/xml" : "<apig:multiplyIntListInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:multiplyIntListInput>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"multiplyIntListOutput\":{\"value\":\"string\"}}",
+                "application/xml" : "<apig:multiplyIntListOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:multiplyIntListOutput>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "multiplyIntList",
+        "invokePath" : "/multiplyIntList"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "absoluteValue",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:absoluteValueInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num>string</num>\n</apig:absoluteValueInput>",
+        "outputMessage" : "<apig:absoluteValueOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <positiveNumber>string</positiveNumber>\n</apig:absoluteValueOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_absoluteValue",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"absoluteValueInput\":{\"num\":\"string\"}}",
+              "application/xml" : "<apig:absoluteValueInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num>string</num>\n</apig:absoluteValueInput>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"absoluteValueOutput\":{\"positiveNumber\":\"string\"}}",
+                "application/xml" : "<apig:absoluteValueOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <positiveNumber>string</positiveNumber>\n</apig:absoluteValueOutput>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "absoluteValue",
+        "invokePath" : "/absoluteValue"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "subtractObjects",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:subtractObjects xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>anyType</num1>\n  <num2>anyType</num2>\n</apig:subtractObjects>",
+        "outputMessage" : "<apig:subtractObjectsResponse xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>anyType</value>\n</apig:subtractObjectsResponse>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_subtractObjects",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"subtractObjects\":{\"num1\":\"anyType\",\"num2\":\"anyType\"}}",
+              "application/xml" : "<apig:subtractObjects xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>anyType</num1>\n  <num2>anyType</num2>\n</apig:subtractObjects>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"subtractObjectsResponse\":{\"value\":\"anyType\"}}",
+                "application/xml" : "<apig:subtractObjectsResponse xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>anyType</value>\n</apig:subtractObjectsResponse>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "subtractObjects",
+        "invokePath" : "/subtractObjects"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "addInts",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:addIntsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>string</num1>\n  <num2>string</num2>\n</apig:addIntsInput>",
+        "outputMessage" : "<apig:addIntsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:addIntsOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_addInts",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"addIntsInput\":{\"num1\":\"string\",\"num2\":\"string\"}}",
+              "application/xml" : "<apig:addIntsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>string</num1>\n  <num2>string</num2>\n</apig:addIntsInput>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"addIntsOutput\":{\"value\":\"string\"}}",
+                "application/xml" : "<apig:addIntsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:addIntsOutput>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "addInts",
+        "invokePath" : "/addInts"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "divideFloats",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:divideFloatsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>string</num1>\n  <num2>string</num2>\n  <!--Optional:-->\n  <precision>string</precision>\n</apig:divideFloatsInput>",
+        "outputMessage" : "<apig:divideFloatsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:divideFloatsOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_divideFloats",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"divideFloatsInput\":{\"num1\":\"string\",\"num2\":\"string\",\"precision\":\"string\"}}",
+              "application/xml" : "<apig:divideFloatsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>string</num1>\n  <num2>string</num2>\n  <!--Optional:-->\n  <precision>string</precision>\n</apig:divideFloatsInput>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"divideFloatsOutput\":{\"value\":\"string\"}}",
+                "application/xml" : "<apig:divideFloatsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:divideFloatsOutput>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "divideFloats",
+        "invokePath" : "/divideFloats"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "subtractInts",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:subtractIntsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>string</num1>\n  <num2>string</num2>\n</apig:subtractIntsInput>",
+        "outputMessage" : "<apig:subtractIntsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:subtractIntsOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_subtractInts",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"subtractIntsInput\":{\"num1\":\"string\",\"num2\":\"string\"}}",
+              "application/xml" : "<apig:subtractIntsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>string</num1>\n  <num2>string</num2>\n</apig:subtractIntsInput>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"subtractIntsOutput\":{\"value\":\"string\"}}",
+                "application/xml" : "<apig:subtractIntsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:subtractIntsOutput>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "subtractInts",
+        "invokePath" : "/subtractInts"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "addFloatList",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:addFloatListInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:addFloatListInput>",
+        "outputMessage" : "<apig:addFloatListOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:addFloatListOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_addFloatList",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"addFloatListInput\":{\"numList\":\"string\"}}",
+              "application/xml" : "<apig:addFloatListInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:addFloatListInput>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"addFloatListOutput\":{\"value\":\"string\"}}",
+                "application/xml" : "<apig:addFloatListOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:addFloatListOutput>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "addFloatList",
+        "invokePath" : "/addFloatList"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "addObjects",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:addObjects xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>anyType</num1>\n  <num2>anyType</num2>\n</apig:addObjects>",
+        "outputMessage" : "<apig:addObjectsResponse xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>anyType</value>\n</apig:addObjectsResponse>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_addObjects",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"addObjects\":{\"num1\":\"anyType\",\"num2\":\"anyType\"}}",
+              "application/xml" : "<apig:addObjects xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>anyType</num1>\n  <num2>anyType</num2>\n</apig:addObjects>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"addObjectsResponse\":{\"value\":\"anyType\"}}",
+                "application/xml" : "<apig:addObjectsResponse xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>anyType</value>\n</apig:addObjectsResponse>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "addObjects",
+        "invokePath" : "/addObjects"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "multiplyFloatList",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:multiplyFloatListInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:multiplyFloatListInput>",
+        "outputMessage" : "<apig:multiplyFloatListOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:multiplyFloatListOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_multiplyFloatList",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"multiplyFloatListInput\":{\"numList\":\"string\"}}",
+              "application/xml" : "<apig:multiplyFloatListInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:multiplyFloatListInput>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"multiplyFloatListOutput\":{\"value\":\"string\"}}",
+                "application/xml" : "<apig:multiplyFloatListOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:multiplyFloatListOutput>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "multiplyFloatList",
+        "invokePath" : "/multiplyFloatList"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "toNumber",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:toNumberInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num>string</num>\n  <!--Optional:-->\n  <convertAs>string</convertAs>\n</apig:toNumberInput>",
+        "outputMessage" : "<apig:toNumberOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num>anyType</num>\n</apig:toNumberOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_toNumber",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"toNumberInput\":{\"num\":\"string\",\"convertAs\":\"string\"}}",
+              "application/xml" : "<apig:toNumberInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num>string</num>\n  <!--Optional:-->\n  <convertAs>string</convertAs>\n</apig:toNumberInput>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"toNumberOutput\":{\"num\":\"anyType\"}}",
+                "application/xml" : "<apig:toNumberOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num>anyType</num>\n</apig:toNumberOutput>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "toNumber",
+        "invokePath" : "/toNumber"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "roundNumber",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:roundNumberInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num>string</num>\n  <numberOfDigits>string</numberOfDigits>\n  <!--Optional:-->\n  <roundingMode>string</roundingMode>\n</apig:roundNumberInput>",
+        "outputMessage" : "<apig:roundNumberOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <roundedNumber>string</roundedNumber>\n</apig:roundNumberOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_roundNumber",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"roundNumberInput\":{\"num\":\"string\",\"numberOfDigits\":\"string\",\"roundingMode\":\"string\"}}",
+              "application/xml" : "<apig:roundNumberInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num>string</num>\n  <numberOfDigits>string</numberOfDigits>\n  <!--Optional:-->\n  <roundingMode>string</roundingMode>\n</apig:roundNumberInput>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"roundNumberOutput\":{\"roundedNumber\":\"string\"}}",
+                "application/xml" : "<apig:roundNumberOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <roundedNumber>string</roundedNumber>\n</apig:roundNumberOutput>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "roundNumber",
+        "invokePath" : "/roundNumber"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "max",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:maxInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:maxInput>",
+        "outputMessage" : "<apig:maxOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <maxValue>string</maxValue>\n</apig:maxOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_max",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"maxInput\":{\"numList\":\"string\"}}",
+              "application/xml" : "<apig:maxInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:maxInput>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"maxOutput\":{\"maxValue\":\"string\"}}",
+                "application/xml" : "<apig:maxOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <maxValue>string</maxValue>\n</apig:maxOutput>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "max",
+        "invokePath" : "/max"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "subtractFloats",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:subtractFloatsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>string</num1>\n  <num2>string</num2>\n  <!--Optional:-->\n  <precision>string</precision>\n</apig:subtractFloatsInput>",
+        "outputMessage" : "<apig:subtractFloatsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:subtractFloatsOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_subtractFloats",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"subtractFloatsInput\":{\"num1\":\"string\",\"num2\":\"string\",\"precision\":\"string\"}}",
+              "application/xml" : "<apig:subtractFloatsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>string</num1>\n  <num2>string</num2>\n  <!--Optional:-->\n  <precision>string</precision>\n</apig:subtractFloatsInput>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"subtractFloatsOutput\":{\"value\":\"string\"}}",
+                "application/xml" : "<apig:subtractFloatsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:subtractFloatsOutput>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "subtractFloats",
+        "invokePath" : "/subtractFloats"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "min",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:minInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:minInput>",
+        "outputMessage" : "<apig:minOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <minValue>string</minValue>\n</apig:minOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_min",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"minInput\":{\"numList\":\"string\"}}",
+              "application/xml" : "<apig:minInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:minInput>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"minOutput\":{\"minValue\":\"string\"}}",
+                "application/xml" : "<apig:minOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <minValue>string</minValue>\n</apig:minOutput>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "min",
+        "invokePath" : "/min"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "multiplyFloats",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:multiplyFloatsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>string</num1>\n  <num2>string</num2>\n  <!--Optional:-->\n  <precision>string</precision>\n</apig:multiplyFloatsInput>",
+        "outputMessage" : "<apig:multiplyFloatsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:multiplyFloatsOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_multiplyFloats",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"multiplyFloatsInput\":{\"num1\":\"string\",\"num2\":\"string\",\"precision\":\"string\"}}",
+              "application/xml" : "<apig:multiplyFloatsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>string</num1>\n  <num2>string</num2>\n  <!--Optional:-->\n  <precision>string</precision>\n</apig:multiplyFloatsInput>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"multiplyFloatsOutput\":{\"value\":\"string\"}}",
+                "application/xml" : "<apig:multiplyFloatsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:multiplyFloatsOutput>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "multiplyFloats",
+        "invokePath" : "/multiplyFloats"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "divideObjects",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:divideObjects xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>anyType</num1>\n  <num2>anyType</num2>\n</apig:divideObjects>",
+        "outputMessage" : "<apig:divideObjectsResponse xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>anyType</value>\n</apig:divideObjectsResponse>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_divideObjects",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"divideObjects\":{\"num1\":\"anyType\",\"num2\":\"anyType\"}}",
+              "application/xml" : "<apig:divideObjects xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>anyType</num1>\n  <num2>anyType</num2>\n</apig:divideObjects>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"divideObjectsResponse\":{\"value\":\"anyType\"}}",
+                "application/xml" : "<apig:divideObjectsResponse xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>anyType</value>\n</apig:divideObjectsResponse>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "divideObjects",
+        "invokePath" : "/divideObjects"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "addFloats",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:addFloatsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>string</num1>\n  <num2>string</num2>\n  <!--Optional:-->\n  <precision>string</precision>\n</apig:addFloatsInput>",
+        "outputMessage" : "<apig:addFloatsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:addFloatsOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_addFloats",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"addFloatsInput\":{\"num1\":\"string\",\"num2\":\"string\",\"precision\":\"string\"}}",
+              "application/xml" : "<apig:addFloatsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>string</num1>\n  <num2>string</num2>\n  <!--Optional:-->\n  <precision>string</precision>\n</apig:addFloatsInput>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"addFloatsOutput\":{\"value\":\"string\"}}",
+                "application/xml" : "<apig:addFloatsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:addFloatsOutput>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "addFloats",
+        "invokePath" : "/addFloats"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "addIntList",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:addIntListInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:addIntListInput>",
+        "outputMessage" : "<apig:addIntListOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:addIntListOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_addIntList",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"addIntListInput\":{\"numList\":\"string\"}}",
+              "application/xml" : "<apig:addIntListInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <!--1 or more repetitions:-->\n  <numList>string</numList>\n</apig:addIntListInput>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"addIntListOutput\":{\"value\":\"string\"}}",
+                "application/xml" : "<apig:addIntListOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:addIntListOutput>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "addIntList",
+        "invokePath" : "/addIntList"
+      },
+      "scopes" : [ ]
+    }, {
+      "name" : "divideInts",
+      "namespace" : "http://webm101.prudhvi.com/APIGatewayDemo.ws:math",
+      "enabled" : true,
+      "bindings" : [ {
+        "name" : "APIGatewayDemo_ws_math_Binder",
+        "type" : "soap",
+        "specifier" : "",
+        "inputMessage" : "<apig:divideIntsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>string</num1>\n  <num2>string</num2>\n</apig:divideIntsInput>",
+        "outputMessage" : "<apig:divideIntsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:divideIntsOutput>"
+      } ],
+      "mockedResponses" : { },
+      "mockedConditionsBasedCustomResponsesList" : [ ],
+      "defined" : true,
+      "soapAction" : "APIGatewayDemo_ws_math_Binder_divideInts",
+      "isRESTInvokeEnabled" : false,
+      "restEnabledPath" : {
+        "post" : {
+          "consumes" : [ "application/json", "application/xml" ],
+          "produces" : [ "application/json", "application/xml" ],
+          "parameters" : [ {
+            "in" : "body",
+            "required" : false,
+            "examples" : {
+              "application/json" : "{\"divideIntsInput\":{\"num1\":\"string\",\"num2\":\"string\"}}",
+              "application/xml" : "<apig:divideIntsInput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <num1>string</num1>\n  <num2>string</num2>\n</apig:divideIntsInput>"
+            }
+          } ],
+          "responses" : {
+            "200" : {
+              "examples" : {
+                "application/json" : "{\"divideIntsOutput\":{\"value\":\"string\"}}",
+                "application/xml" : "<apig:divideIntsOutput xmlns:apig=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <value>string</value>\n</apig:divideIntsOutput>"
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true
+        },
+        "parameters" : [ ],
+        "enabled" : true,
+        "name" : "divideInts",
+        "invokePath" : "/divideInts"
+      },
+      "scopes" : [ ]
+    } ],
+    "type" : "soap",
+    "operationPolicies" : {
+      "addInts" : "",
+      "addObjects" : "",
+      "absoluteValue" : "",
+      "subtractFloats" : "",
+      "multiplyIntList" : "",
+      "max" : "",
+      "multiplyFloats" : "",
+      "multiplyObjects" : "",
+      "randomDouble" : "",
+      "divideObjects" : "",
+      "addIntList" : "",
+      "divideInts" : "",
+      "subtractObjects" : "",
+      "divideFloats" : "",
+      "addFloatList" : "",
+      "subtractInts" : "",
+      "addFloats" : "",
+      "min" : "",
+      "roundNumber" : "",
+      "multiplyInts" : "",
+      "multiplyFloatList" : "",
+      "toNumber" : ""
+    },
+    "isRESTInvokeEnabled" : false
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "http://webm101.prudhvi.com:5555/ws/APIGatewayDemo.ws:math/APIGatewayDemo_ws_math_Port",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "math.api",
+  "apiVersion" : "1",
+  "maturityState" : "Beta",
+  "isActive" : true,
+  "type" : "SOAP",
+  "owner" : "Administrator",
+  "policies" : [ "20d13426-c267-4185-aa6e-66c1743472af" ],
+  "referencedFiles" : {
+    "APIGatewayDemo.ws.math.wsdl" : "<wsdl:definitions xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\" xmlns:soapjms=\"http://www.w3.org/2010/soapjms/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\" xmlns:tns=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\" xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" name=\"math\" targetNamespace=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n  <wsdl:types>\n    <xsd:schema targetNamespace=\"http://webm101.prudhvi.com/APIGatewayDemo.ws:math\">\n          <xsd:element name=\"absoluteValueInput\" type=\"tns:absoluteValueInput\"/>\n          <xsd:element name=\"absoluteValueOutput\" type=\"tns:absoluteValueOutput\"/>\n          <xsd:element name=\"addFloatListInput\" type=\"tns:addFloatListInput\"/>\n          <xsd:element name=\"addFloatListOutput\" type=\"tns:addFloatListOutput\"/>\n          <xsd:element name=\"addFloatsInput\" type=\"tns:addFloatsInput\"/>\n          <xsd:element name=\"addFloatsOutput\" type=\"tns:addFloatsOutput\"/>\n          <xsd:element name=\"addIntListInput\" type=\"tns:addIntListInput\"/>\n          <xsd:element name=\"addIntListOutput\" type=\"tns:addIntListOutput\"/>\n          <xsd:element name=\"addIntsInput\" type=\"tns:addIntsInput\"/>\n          <xsd:element name=\"addIntsOutput\" type=\"tns:addIntsOutput\"/>\n          <xsd:element name=\"addObjects\" type=\"tns:addObjects\"/>\n          <xsd:element name=\"addObjectsResponse\" type=\"tns:addObjectsResponse\"/>\n          <xsd:element name=\"divideFloatsInput\" type=\"tns:divideFloatsInput\"/>\n          <xsd:element name=\"divideFloatsOutput\" type=\"tns:divideFloatsOutput\"/>\n          <xsd:element name=\"divideIntsInput\" type=\"tns:divideIntsInput\"/>\n          <xsd:element name=\"divideIntsOutput\" type=\"tns:divideIntsOutput\"/>\n          <xsd:element name=\"divideObjects\" type=\"tns:divideObjects\"/>\n          <xsd:element name=\"divideObjectsResponse\" type=\"tns:divideObjectsResponse\"/>\n          <xsd:element name=\"maxInput\" type=\"tns:maxInput\"/>\n          <xsd:element name=\"maxOutput\" type=\"tns:maxOutput\"/>\n          <xsd:element name=\"minInput\" type=\"tns:minInput\"/>\n          <xsd:element name=\"minOutput\" type=\"tns:minOutput\"/>\n          <xsd:element name=\"multiplyFloatListInput\" type=\"tns:multiplyFloatListInput\"/>\n          <xsd:element name=\"multiplyFloatListOutput\" type=\"tns:multiplyFloatListOutput\"/>\n          <xsd:element name=\"multiplyFloatsInput\" type=\"tns:multiplyFloatsInput\"/>\n          <xsd:element name=\"multiplyFloatsOutput\" type=\"tns:multiplyFloatsOutput\"/>\n          <xsd:element name=\"multiplyIntListInput\" type=\"tns:multiplyIntListInput\"/>\n          <xsd:element name=\"multiplyIntListOutput\" type=\"tns:multiplyIntListOutput\"/>\n          <xsd:element name=\"multiplyIntsInput\" type=\"tns:multiplyIntsInput\"/>\n          <xsd:element name=\"multiplyIntsOutput\" type=\"tns:multiplyIntsOutput\"/>\n          <xsd:element name=\"multiplyObjects\" type=\"tns:multiplyObjects\"/>\n          <xsd:element name=\"multiplyObjectsResponse\" type=\"tns:multiplyObjectsResponse\"/>\n          <xsd:element name=\"randomDoubleInput\" type=\"tns:randomDoubleInput\"/>\n          <xsd:element name=\"randomDoubleOutput\" type=\"tns:randomDoubleOutput\"/>\n          <xsd:element name=\"roundNumberInput\" type=\"tns:roundNumberInput\"/>\n          <xsd:element name=\"roundNumberOutput\" type=\"tns:roundNumberOutput\"/>\n          <xsd:element name=\"subtractFloatsInput\" type=\"tns:subtractFloatsInput\"/>\n          <xsd:element name=\"subtractFloatsOutput\" type=\"tns:subtractFloatsOutput\"/>\n          <xsd:element name=\"subtractIntsInput\" type=\"tns:subtractIntsInput\"/>\n          <xsd:element name=\"subtractIntsOutput\" type=\"tns:subtractIntsOutput\"/>\n          <xsd:element name=\"subtractObjects\" type=\"tns:subtractObjects\"/>\n          <xsd:element name=\"subtractObjectsResponse\" type=\"tns:subtractObjectsResponse\"/>\n          <xsd:element name=\"toNumberInput\" type=\"tns:toNumberInput\"/>\n          <xsd:element name=\"toNumberOutput\" type=\"tns:toNumberOutput\"/>\n          <xsd:complexType name=\"absoluteValueInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"absoluteValueOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"positiveNumber\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addFloatListInput\">\n            <xsd:sequence>\n              <xsd:element maxOccurs=\"unbounded\" name=\"numList\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addFloatListOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addFloatsInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element minOccurs=\"0\" name=\"precision\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addFloatsOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addIntListInput\">\n            <xsd:sequence>\n              <xsd:element maxOccurs=\"unbounded\" name=\"numList\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addIntListOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addIntsInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addIntsOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addObjects\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:anyType\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:anyType\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"addObjectsResponse\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:anyType\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"divideFloatsInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element minOccurs=\"0\" name=\"precision\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"divideFloatsOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"divideIntsInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"divideIntsOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"divideObjects\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:anyType\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:anyType\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"divideObjectsResponse\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:anyType\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"maxInput\">\n            <xsd:sequence>\n              <xsd:element maxOccurs=\"unbounded\" name=\"numList\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"maxOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"maxValue\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"minInput\">\n            <xsd:sequence>\n              <xsd:element maxOccurs=\"unbounded\" name=\"numList\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"minOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"minValue\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"multiplyFloatListInput\">\n            <xsd:sequence>\n              <xsd:element maxOccurs=\"unbounded\" name=\"numList\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"multiplyFloatListOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"multiplyFloatsInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element minOccurs=\"0\" name=\"precision\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"multiplyFloatsOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"multiplyIntListInput\">\n            <xsd:sequence>\n              <xsd:element maxOccurs=\"unbounded\" name=\"numList\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"multiplyIntListOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"multiplyIntsInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"multiplyIntsOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"multiplyObjects\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:anyType\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:anyType\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"multiplyObjectsResponse\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:anyType\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"randomDoubleInput\">\n            <xsd:sequence>\n              <xsd:element minOccurs=\"0\" name=\"fractionLength\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"randomDoubleOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"number\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"roundNumberInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element name=\"numberOfDigits\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element minOccurs=\"0\" name=\"roundingMode\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"roundNumberOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"roundedNumber\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"subtractFloatsInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element minOccurs=\"0\" name=\"precision\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"subtractFloatsOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"subtractIntsInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"subtractIntsOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"subtractObjects\">\n            <xsd:sequence>\n              <xsd:element name=\"num1\" nillable=\"true\" type=\"xsd:anyType\"/>\n              <xsd:element name=\"num2\" nillable=\"true\" type=\"xsd:anyType\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"subtractObjectsResponse\">\n            <xsd:sequence>\n              <xsd:element name=\"value\" nillable=\"true\" type=\"xsd:anyType\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"toNumberInput\">\n            <xsd:sequence>\n              <xsd:element name=\"num\" nillable=\"true\" type=\"xsd:string\"/>\n              <xsd:element minOccurs=\"0\" name=\"convertAs\" nillable=\"true\" type=\"xsd:string\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n          <xsd:complexType name=\"toNumberOutput\">\n            <xsd:sequence>\n              <xsd:element name=\"num\" nillable=\"true\" type=\"xsd:anyType\"/>\n            </xsd:sequence>\n          </xsd:complexType>\n        \t</xsd:schema>\n  </wsdl:types>\n  <wsdl:message name=\"math_PortType_subtractObjects\">\n    <wsdl:part name=\"parameters\" element=\"tns:subtractObjects\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_roundNumberOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:roundNumberOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_divideObjects\">\n    <wsdl:part name=\"parameters\" element=\"tns:divideObjects\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_minInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:minInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_subtractFloatsOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:subtractFloatsOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_addFloatsOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:addFloatsOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_divideIntsOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:divideIntsOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_multiplyFloatListInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:multiplyFloatListInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_multiplyObjects\">\n    <wsdl:part name=\"parameters\" element=\"tns:multiplyObjects\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_multiplyFloatsOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:multiplyFloatsOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_subtractObjectsResponse\">\n    <wsdl:part name=\"parameters\" element=\"tns:subtractObjectsResponse\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_multiplyFloatListOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:multiplyFloatListOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_absoluteValueOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:absoluteValueOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_roundNumberInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:roundNumberInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_toNumberInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:toNumberInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_maxInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:maxInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_divideIntsInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:divideIntsInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_multiplyIntsInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:multiplyIntsInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_multiplyIntListOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:multiplyIntListOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_multiplyIntsOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:multiplyIntsOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_addIntsInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:addIntsInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_addIntListInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:addIntListInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_minOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:minOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_addObjectsResponse\">\n    <wsdl:part name=\"parameters\" element=\"tns:addObjectsResponse\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_addFloatsInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:addFloatsInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_addIntsOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:addIntsOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_divideFloatsInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:divideFloatsInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_multiplyIntListInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:multiplyIntListInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_randomDoubleOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:randomDoubleOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_multiplyObjectsResponse\">\n    <wsdl:part name=\"parameters\" element=\"tns:multiplyObjectsResponse\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_multiplyFloatsInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:multiplyFloatsInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_absoluteValueInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:absoluteValueInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_subtractIntsOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:subtractIntsOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_randomDoubleInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:randomDoubleInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_divideObjectsResponse\">\n    <wsdl:part name=\"parameters\" element=\"tns:divideObjectsResponse\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_addFloatListInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:addFloatListInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_addObjects\">\n    <wsdl:part name=\"parameters\" element=\"tns:addObjects\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_maxOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:maxOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_toNumberOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:toNumberOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_subtractIntsInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:subtractIntsInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_addFloatListOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:addFloatListOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_addIntListOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:addIntListOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_subtractFloatsInput\">\n    <wsdl:part name=\"parameters\" element=\"tns:subtractFloatsInput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:message name=\"math_PortType_divideFloatsOutput\">\n    <wsdl:part name=\"parameters\" element=\"tns:divideFloatsOutput\">\n    </wsdl:part>\n  </wsdl:message>\n  <wsdl:portType name=\"math_PortType\">\n    <wsdl:operation name=\"addInts\">\n      <wsdl:input message=\"tns:math_PortType_addIntsInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_addIntsOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"addObjects\">\n      <wsdl:input message=\"tns:math_PortType_addObjects\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_addObjectsResponse\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"roundNumber\">\n      <wsdl:input message=\"tns:math_PortType_roundNumberInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_roundNumberOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"addIntList\">\n      <wsdl:input message=\"tns:math_PortType_addIntListInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_addIntListOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"toNumber\">\n      <wsdl:input message=\"tns:math_PortType_toNumberInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_toNumberOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"divideInts\">\n      <wsdl:input message=\"tns:math_PortType_divideIntsInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_divideIntsOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"multiplyInts\">\n      <wsdl:input message=\"tns:math_PortType_multiplyIntsInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_multiplyIntsOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"max\">\n      <wsdl:input message=\"tns:math_PortType_maxInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_maxOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"multiplyObjects\">\n      <wsdl:input message=\"tns:math_PortType_multiplyObjects\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_multiplyObjectsResponse\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"multiplyFloatList\">\n      <wsdl:input message=\"tns:math_PortType_multiplyFloatListInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_multiplyFloatListOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"subtractInts\">\n      <wsdl:input message=\"tns:math_PortType_subtractIntsInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_subtractIntsOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"divideFloats\">\n      <wsdl:input message=\"tns:math_PortType_divideFloatsInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_divideFloatsOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"multiplyFloats\">\n      <wsdl:input message=\"tns:math_PortType_multiplyFloatsInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_multiplyFloatsOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"absoluteValue\">\n      <wsdl:input message=\"tns:math_PortType_absoluteValueInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_absoluteValueOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"subtractObjects\">\n      <wsdl:input message=\"tns:math_PortType_subtractObjects\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_subtractObjectsResponse\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"randomDouble\">\n      <wsdl:input message=\"tns:math_PortType_randomDoubleInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_randomDoubleOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"divideObjects\">\n      <wsdl:input message=\"tns:math_PortType_divideObjects\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_divideObjectsResponse\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"min\">\n      <wsdl:input message=\"tns:math_PortType_minInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_minOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"addFloatList\">\n      <wsdl:input message=\"tns:math_PortType_addFloatListInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_addFloatListOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"multiplyIntList\">\n      <wsdl:input message=\"tns:math_PortType_multiplyIntListInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_multiplyIntListOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"subtractFloats\">\n      <wsdl:input message=\"tns:math_PortType_subtractFloatsInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_subtractFloatsOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"addFloats\">\n      <wsdl:input message=\"tns:math_PortType_addFloatsInput\">\n    </wsdl:input>\n      <wsdl:output message=\"tns:math_PortType_addFloatsOutput\">\n    </wsdl:output>\n    </wsdl:operation>\n  </wsdl:portType>\n  <wsdl:binding name=\"APIGatewayDemo_ws_math_Binder\" type=\"tns:math_PortType\">\n    <soap:binding style=\"document\" transport=\"http://schemas.xmlsoap.org/soap/http\"/>\n    <wsdl:operation name=\"addInts\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_addInts\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"addObjects\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_addObjects\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"roundNumber\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_roundNumber\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"addIntList\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_addIntList\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"toNumber\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_toNumber\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"divideInts\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_divideInts\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"multiplyInts\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_multiplyInts\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"max\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_max\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"multiplyObjects\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_multiplyObjects\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"multiplyFloatList\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_multiplyFloatList\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"subtractInts\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_subtractInts\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"divideFloats\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_divideFloats\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"multiplyFloats\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_multiplyFloats\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"absoluteValue\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_absoluteValue\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"subtractObjects\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_subtractObjects\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"randomDouble\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_randomDouble\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"divideObjects\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_divideObjects\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"min\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_min\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"addFloatList\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_addFloatList\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"multiplyIntList\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_multiplyIntList\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"subtractFloats\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_subtractFloats\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n    <wsdl:operation name=\"addFloats\">\n      <soap:operation soapAction=\"APIGatewayDemo_ws_math_Binder_addFloats\" style=\"document\"/>\n      <wsdl:input>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:input>\n      <wsdl:output>\n        <soap:body parts=\"parameters\" use=\"literal\"/>\n      </wsdl:output>\n    </wsdl:operation>\n  </wsdl:binding>\n  <wsdl:service name=\"APIGatewayDemo.ws.math\">\n    <wsdl:port name=\"APIGatewayDemo_ws_math_Port\" binding=\"tns:APIGatewayDemo_ws_math_Binder\">\n      <soap:address location=\"http://webm101.prudhvi.com:5555/ws/APIGatewayDemo.ws:math/APIGatewayDemo_ws_math_Port\"/>\n    </wsdl:port>\n  </wsdl:service>\n</wsdl:definitions>"
+  },
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2018-06-22 01:51:32 GMT",
+  "lastModified" : "2018-06-22 02:08:20 GMT",
+  "systemVersion" : 1,
+  "id" : "8d3759ea-3892-4f66-9804-a11cf9386152"
+}

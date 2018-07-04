@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<asset_composite name="APIGatewayAssets" displayName="Assets for API Gateway" runtimeVersion="10.1" targetNamespace="http://namespaces.softwareag.com/webMethods/APIGateway" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
+    <buildInfo name="BuildTimestamp" value="2018-07-04T07:14:10"/>
+    <asset name="Policy.1c2359d6-2a9f-40eb-8988-7494d6cf17d0" displayName="Policy For API address[1.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.70a76882-64ad-492d-9094-d2159f498522</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.d4307b90-78ae-4a55-9379-70e4d007e006</dependsOn>
+    </asset>
+    <asset name="PolicyAction.d4307b90-78ae-4a55-9379-70e4d007e006" displayName="Policy Action [Require HTTP / HTTPS] -&gt; Policy For API address[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.70a76882-64ad-492d-9094-d2159f498522" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API address[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="Application.055923b9-ed2e-4b01-835c-d79a002c6136" displayName="windows.prudhvi.com" isDeployable="true">
+        <implementation.generic type="Application"/>
+        <dependsOn>APIGateway:API.8d3759ea-3892-4f66-9804-a11cf9386152</dependsOn>
+        <dependsOn>APIGateway:API.a366ccad-e87d-4244-bb22-61987d92864f</dependsOn>
+        <dependsOn>APIGateway:PassmanData.API_ACCESS_KEY055923b9-ed2e-4b01-835c-d79a002c6136</dependsOn>
+    </asset>
+    <asset name="API.8d3759ea-3892-4f66-9804-a11cf9386152" displayName="math.api[1]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:Application.055923b9-ed2e-4b01-835c-d79a002c6136</dependsOn>
+        <dependsOn>APIGateway:Application.7c06d162-c082-4dbd-9ea5-c940ced65b30</dependsOn>
+        <dependsOn>APIGateway:Policy.20d13426-c267-4185-aa6e-66c1743472af</dependsOn>
+    </asset>
+    <asset name="Policy.20d13426-c267-4185-aa6e-66c1743472af" displayName="Policy For API math.api[1]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.0f2bf551-a0a2-4a3a-8608-17bef5995914</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.35a80146-7096-439b-8d91-75966212960c</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.4e46d2d3-fa2a-4b91-be79-96947c550a78</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.843f856d-618a-4b68-8761-c369d79b0e0e</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.d415779d-4854-4d45-95a3-3adba6db30db</dependsOn>
+    </asset>
+    <asset name="PolicyAction.4e46d2d3-fa2a-4b91-be79-96947c550a78" displayName="Policy Action [Load Balancer Routing] -&gt; Policy For API math.api[1]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.d415779d-4854-4d45-95a3-3adba6db30db" displayName="Policy Action [Outbound Authentication - Transport] -&gt; Policy For API math.api[1]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+        <dependsOn>APIGateway:PassmanData.d415779d-4854-4d45-95a3-3adba6db30dbpassword</dependsOn>
+    </asset>
+    <asset name="PassmanData.d415779d-4854-4d45-95a3-3adba6db30dbpassword" displayName="d415779d-4854-4d45-95a3-3adba6db30dbpassword" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="PolicyAction.0f2bf551-a0a2-4a3a-8608-17bef5995914" displayName="Policy Action [Log Invocation] -&gt; Policy For API math.api[1]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.843f856d-618a-4b68-8761-c369d79b0e0e" displayName="Policy Action [Monitor Service Performance] -&gt; Policy For API math.api[1]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.35a80146-7096-439b-8d91-75966212960c" displayName="Policy Action [Require HTTP / HTTPS] -&gt; Policy For API math.api[1]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="Application.7c06d162-c082-4dbd-9ea5-c940ced65b30" displayName="DemoClient1" isDeployable="true">
+        <implementation.generic type="Application"/>
+        <dependsOn>APIGateway:API.1c4d92bb-a0ba-4804-af80-aa60f30f07e1</dependsOn>
+        <dependsOn>APIGateway:API.8d3759ea-3892-4f66-9804-a11cf9386152</dependsOn>
+        <dependsOn>APIGateway:API.a366ccad-e87d-4244-bb22-61987d92864f</dependsOn>
+        <dependsOn>APIGateway:PassmanData.API_ACCESS_KEY7c06d162-c082-4dbd-9ea5-c940ced65b30</dependsOn>
+    </asset>
+    <asset name="API.1c4d92bb-a0ba-4804-af80-aa60f30f07e1" displayName="GoogleCalendar[2.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:Application.7c06d162-c082-4dbd-9ea5-c940ced65b30</dependsOn>
+        <dependsOn>APIGateway:Policy.b231427a-9cc2-48ca-906a-a31526ceb41a</dependsOn>
+    </asset>
+    <asset name="Policy.b231427a-9cc2-48ca-906a-a31526ceb41a" displayName="Policy For API GoogleCalendar[2.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.07610fe7-7332-4105-85bb-ef64efc654c3</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.3934930d-c2bc-4625-8161-4627165bfa71</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.a1b79d44-b748-4a8c-9e18-7ef55790a2da</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.b2005d24-067d-4aef-990d-c42de0536127</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.f54196f7-44bc-4b9e-9b22-af4ba2fd6022</dependsOn>
+    </asset>
+    <asset name="PolicyAction.07610fe7-7332-4105-85bb-ef64efc654c3" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API GoogleCalendar[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.a1b79d44-b748-4a8c-9e18-7ef55790a2da" displayName="Policy Action [Outbound Authentication - Transport] -&gt; Policy For API GoogleCalendar[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+        <dependsOn>APIGateway:PassmanData.a1b79d44-b748-4a8c-9e18-7ef55790a2daoauth2Token</dependsOn>
+    </asset>
+    <asset name="PassmanData.a1b79d44-b748-4a8c-9e18-7ef55790a2daoauth2Token" displayName="a1b79d44-b748-4a8c-9e18-7ef55790a2daoauth2Token" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="PolicyAction.f54196f7-44bc-4b9e-9b22-af4ba2fd6022" displayName="Policy Action [Identify &amp; Authorize Application] -&gt; Policy For API GoogleCalendar[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.b2005d24-067d-4aef-990d-c42de0536127" displayName="Policy Action [Require HTTP / HTTPS] -&gt; Policy For API GoogleCalendar[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.3934930d-c2bc-4625-8161-4627165bfa71" displayName="Policy Action [Set Media Type] -&gt; Policy For API GoogleCalendar[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="API.a366ccad-e87d-4244-bb22-61987d92864f" displayName="DemoOrder[2.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:Application.055923b9-ed2e-4b01-835c-d79a002c6136</dependsOn>
+        <dependsOn>APIGateway:Application.7c06d162-c082-4dbd-9ea5-c940ced65b30</dependsOn>
+        <dependsOn>APIGateway:Policy.67798bd8-67e0-474d-8a00-5f75e3c76a20</dependsOn>
+        <dependsOn>APIGateway:Policy.b50cf008-cdb5-40c3-bef5-3f73ddb35997</dependsOn>
+        <dependsOn>APIGateway:Policy.bdc09aa0-8933-4c9d-ae8b-9c66478556d5</dependsOn>
+        <dependsOn>APIGateway:Policy.e79a590a-ab14-4eb8-bada-fe4aca37aabe</dependsOn>
+    </asset>
+    <asset name="Policy.67798bd8-67e0-474d-8a00-5f75e3c76a20" displayName="Policy For API DemoOrder[2.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.141c78b7-ce9c-493f-825d-92691e81fdfa</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.4a663711-b715-41d3-8ac4-002958b42dd6</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.6b3dcc03-b72f-4582-96e8-885a28de9705</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.71598ccf-2668-48c1-99ba-96c758151e38</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.93412aa6-4aad-4d94-b3bd-3468ad156b5f</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.d2e481e8-54ed-4f7d-9615-612ecb591f8b</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.f5643b83-c44b-4cd1-b815-ea08ede4195d</dependsOn>
+    </asset>
+    <asset name="PolicyAction.4a663711-b715-41d3-8ac4-002958b42dd6" displayName="Policy Action [Outbound Authentication - Transport] -&gt; Policy For API DemoOrder[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+        <dependsOn>APIGateway:PassmanData.4a663711-b715-41d3-8ac4-002958b42dd6password</dependsOn>
+    </asset>
+    <asset name="PassmanData.4a663711-b715-41d3-8ac4-002958b42dd6password" displayName="4a663711-b715-41d3-8ac4-002958b42dd6password" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="PolicyAction.f5643b83-c44b-4cd1-b815-ea08ede4195d" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API DemoOrder[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.93412aa6-4aad-4d94-b3bd-3468ad156b5f" displayName="Policy Action [Log Invocation] -&gt; Policy For API DemoOrder[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.6b3dcc03-b72f-4582-96e8-885a28de9705" displayName="Policy Action [Monitor Service Level Agreement] -&gt; Policy For API DemoOrder[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.d2e481e8-54ed-4f7d-9615-612ecb591f8b" displayName="Policy Action [Throttling Traffic Optimization] -&gt; Policy For API DemoOrder[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+        <dependsOn>APIGateway:Application.7c06d162-c082-4dbd-9ea5-c940ced65b30</dependsOn>
+    </asset>
+    <asset name="PolicyAction.141c78b7-ce9c-493f-825d-92691e81fdfa" displayName="Policy Action [Identify &amp; Authorize Application] -&gt; Policy For API DemoOrder[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.71598ccf-2668-48c1-99ba-96c758151e38" displayName="Policy Action [Require HTTP / HTTPS] -&gt; Policy For API DemoOrder[2.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="Policy.e79a590a-ab14-4eb8-bada-fe4aca37aabe" displayName="Policy For API DemoOrder[2.0] Scope [apikey]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.b6d8f88a-745e-4b60-bcd6-4cbf77949d62</dependsOn>
+    </asset>
+    <asset name="PolicyAction.b6d8f88a-745e-4b60-bcd6-4cbf77949d62" displayName="Policy Action [Identify &amp; Authorize Application] -&gt; Policy For API DemoOrder[2.0] Scope [apikey]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="Policy.bdc09aa0-8933-4c9d-ae8b-9c66478556d5" displayName="Policy For API DemoOrder[2.0] Scope [iprange]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.1992ba04-05ec-413a-ae7b-cb1568b6ba8e</dependsOn>
+    </asset>
+    <asset name="PolicyAction.1992ba04-05ec-413a-ae7b-cb1568b6ba8e" displayName="Policy Action [Identify &amp; Authorize Application] -&gt; Policy For API DemoOrder[2.0] Scope [iprange]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="Policy.b50cf008-cdb5-40c3-bef5-3f73ddb35997" displayName="Policy For API DemoOrder[2.0] Scope [scopedemo]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+    </asset>
+    <asset name="PassmanData.API_ACCESS_KEY7c06d162-c082-4dbd-9ea5-c940ced65b30" displayName="API_ACCESS_KEY7c06d162-c082-4dbd-9ea5-c940ced65b30" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="PassmanData.API_ACCESS_KEY055923b9-ed2e-4b01-835c-d79a002c6136" displayName="API_ACCESS_KEY055923b9-ed2e-4b01-835c-d79a002c6136" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="PolicyAction.24fb23ab-a44c-4315-a8a1-53416165e371" displayName="Policy Action [Throttling Traffic Optimization] -&gt; GoldServicePackage" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="Alias.ae3c7265-ddfc-490e-854b-6c47bcc68c6e" displayName="PingFederate" isDeployable="true">
+        <implementation.generic type="Alias"/>
+    </asset>
+    <asset name="AdministratorSetting.emailDestinationConfig" displayName="Email" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+        <dependsOn>APIGateway:PassmanData.gateway.destination.email.handle</dependsOn>
+    </asset>
+    <asset name="PassmanData.gateway.destination.email.handle" displayName="gateway.destination.email.handle" isDeployable="true">
+        <implementation.generic type="PassmanData"/>
+    </asset>
+    <asset name="AdministratorSetting.HTTPListener@9999" displayName="HTTPListener@9999" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="AdministratorSetting.dashboard" displayName="Configuration Dashboard setting" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="AdministratorSetting.HTTPSListener@5556" displayName="HTTPSListener@5556" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="AdministratorSetting.HTTPListener@5555" displayName="HTTPListener@5555" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="PolicyAction.196145de-cee5-4a69-9841-635132975883" displayName="Policy Action [Require HTTP / HTTPS] -&gt; Policy For API OrderDemo[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.cache" displayName="cache" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="AdministratorSetting.errorProcessing" displayName="Service fault" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="Policy.78306131-77ad-4e38-a663-8434361ef2f2" displayName="Policy For API WebsocketTestAPI[1.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.b68b2498-ea98-4bfa-a291-099da7bc3b06</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.c7a6bac5-95c4-412a-b62c-2a8a2c280bd1</dependsOn>
+    </asset>
+    <asset name="PolicyAction.c7a6bac5-95c4-412a-b62c-2a8a2c280bd1" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API WebsocketTestAPI[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.b68b2498-ea98-4bfa-a291-099da7bc3b06" displayName="Policy Action [Identify &amp; Authorize Application] -&gt; Policy For API WebsocketTestAPI[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.c84ceac1-e270-42b2-a39f-0181f2cc4a64" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API OrderDemo[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.loadBalancer" displayName="Load balancer" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="Policy.a0735560-ce47-40f0-b4ba-0a905aa44570" displayName="a0735560-ce47-40f0-b4ba-0a905aa44570" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.b28c17db-c5ea-4168-a1cc-b246d704761f</dependsOn>
+    </asset>
+    <asset name="PolicyAction.b28c17db-c5ea-4168-a1cc-b246d704761f" displayName="Policy Action [Throttling Traffic Optimization] -&gt; a0735560-ce47-40f0-b4ba-0a905aa44570" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.80084131-d38a-4a4f-b889-5ed07681d488" displayName="Log Invocation" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="Policy.a418ee3d-cfe2-41f3-a5d0-614adc67a237" displayName="Quota for plan DemoOrderGoldPlan" isDeployable="true">
+        <implementation.generic type="Policy"/>
+    </asset>
+    <asset name="AdministratorSetting.misc" displayName="Configuration Miscellaneous" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="PolicyAction.cafb3a72-47f3-4e61-b315-aaaa69859811" displayName="Policy Action [Require HTTP / HTTPS] -&gt; Policy For API contacts[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="Plan.27463f73-37b2-41d3-acec-f9de3c209b4f" displayName="DemoOrderGoldPlan" isDeployable="true">
+        <implementation.generic type="Plan"/>
+        <dependsOn>APIGateway:Policy.a0735560-ce47-40f0-b4ba-0a905aa44570</dependsOn>
+        <dependsOn>APIGateway:Policy.cb52f018-9270-42ba-88f8-aeefeb22a27e</dependsOn>
+    </asset>
+    <asset name="Policy.cb52f018-9270-42ba-88f8-aeefeb22a27e" displayName="cb52f018-9270-42ba-88f8-aeefeb22a27e" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.70e62e52-6b37-41b5-bf25-63ac8a393ad1</dependsOn>
+    </asset>
+    <asset name="PolicyAction.70e62e52-6b37-41b5-bf25-63ac8a393ad1" displayName="Policy Action [Monitor Service Level Agreement] -&gt; cb52f018-9270-42ba-88f8-aeefeb22a27e" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.GlobalLogInvocationPolicyAction" displayName="Policy Action [Log Invocation] -&gt; Transaction logging" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="Policy.27a5150d-705d-483a-bc60-ba60fa34a57a" displayName="Policy For API OrderDemo[1.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.196145de-cee5-4a69-9841-635132975883</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.c84ceac1-e270-42b2-a39f-0181f2cc4a64</dependsOn>
+    </asset>
+    <asset name="Package.fe8447fb-ebc0-42fc-9be3-ab069b1166ab" displayName="GoldServicePackage [1.0] " isDeployable="true">
+        <implementation.generic type="Package"/>
+        <dependsOn>APIGateway:API.a366ccad-e87d-4244-bb22-61987d92864f</dependsOn>
+        <dependsOn>APIGateway:Plan.27463f73-37b2-41d3-acec-f9de3c209b4f</dependsOn>
+        <dependsOn>APIGateway:Policy.2358b460-4a05-4ca6-be1f-3fbd1268ad4c</dependsOn>
+    </asset>
+    <asset name="Policy.2358b460-4a05-4ca6-be1f-3fbd1268ad4c" displayName="GoldServicePackage" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.24fb23ab-a44c-4315-a8a1-53416165e371</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.ce601d54-18ec-4062-9f83-ec35e049063b</dependsOn>
+    </asset>
+    <asset name="PolicyAction.ce601d54-18ec-4062-9f83-ec35e049063b" displayName="Policy Action [Identify &amp; Authorize Application] -&gt; GoldServicePackage" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="PolicyAction.81764af1-ba0f-4f99-82ba-607acc64b16b" displayName="Identify &amp; Authorize Application" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="AdministratorSetting.customContentTypes" displayName="customContentTypes" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="PolicyAction.4e841686-0aef-440c-9c2e-182bb1064382" displayName="Policy Action [Straight Through Routing] -&gt; Policy For API contacts[1.0]" isDeployable="true">
+        <implementation.generic type="PolicyAction"/>
+    </asset>
+    <asset name="API.7fcd8c38-d364-4668-afb9-b69f226f2f92" displayName="contacts[1.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:Policy.6e837dbd-7c70-4e3c-9e2c-4cf1cc7d1174</dependsOn>
+    </asset>
+    <asset name="Policy.6e837dbd-7c70-4e3c-9e2c-4cf1cc7d1174" displayName="Policy For API contacts[1.0]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.4e841686-0aef-440c-9c2e-182bb1064382</dependsOn>
+        <dependsOn>APIGateway:PolicyAction.cafb3a72-47f3-4e61-b315-aaaa69859811</dependsOn>
+    </asset>
+    <asset name="AdministratorSetting.mobileApp" displayName="mobileApp" isDeployable="true">
+        <implementation.generic type="AdministratorSetting"/>
+    </asset>
+    <asset name="API.0839cb21-a015-460b-a07f-8086e2c80ebd" displayName="address[1.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:Policy.1c2359d6-2a9f-40eb-8988-7494d6cf17d0</dependsOn>
+    </asset>
+    <asset name="API.723e24f7-49b0-4827-bb5a-273bc9f15e7a" displayName="WebsocketTestAPI[1.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:Policy.78306131-77ad-4e38-a663-8434361ef2f2</dependsOn>
+    </asset>
+    <asset name="Policy.3fe2de6d-4ab7-438a-bf68-57c3ab6fb255" displayName="DemoOrder_scopePolicy" isDeployable="true">
+        <implementation.generic type="Policy"/>
+    </asset>
+    <asset name="Policy.4f7ff00d-52f6-49e5-b8d6-55caba714f9a" displayName="Quota for plan DemoOrderGoldPlan" isDeployable="true">
+        <implementation.generic type="Policy"/>
+    </asset>
+    <asset name="Alias.17138cc7-424a-4cab-ac0f-98ea02112e22" displayName="OKTA" isDeployable="true">
+        <implementation.generic type="Alias"/>
+    </asset>
+    <asset name="Policy.GlobalLogInvocationPolicy" displayName="Transaction logging[Global Policy]" isDeployable="true">
+        <implementation.generic type="Policy"/>
+        <dependsOn>APIGateway:PolicyAction.GlobalLogInvocationPolicyAction</dependsOn>
+    </asset>
+    <asset name="Policy.7889aaea-17c5-4774-9b9f-01cea7692768" displayName="Quota for plan DemoOrderGoldPlan" isDeployable="true">
+        <implementation.generic type="Policy"/>
+    </asset>
+    <asset name="API.143a7f51-a228-4e80-bea7-574873ec2b25" displayName="OrderDemo[1.0]" isDeployable="true">
+        <implementation.generic type="API"/>
+        <dependsOn>APIGateway:Policy.27a5150d-705d-483a-bc60-ba60fa34a57a</dependsOn>
+    </asset>
+</asset_composite>

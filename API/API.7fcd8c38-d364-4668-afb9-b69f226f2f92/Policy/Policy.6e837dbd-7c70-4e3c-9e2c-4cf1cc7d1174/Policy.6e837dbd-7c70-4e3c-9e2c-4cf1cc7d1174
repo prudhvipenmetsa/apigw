@@ -1,0 +1,29 @@
+{
+  "id" : "6e837dbd-7c70-4e3c-9e2c-4cf1cc7d1174",
+  "names" : [ {
+    "value" : "Default Policy for API contacts",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "4e841686-0aef-440c-9c2e-182bb1064382"
+    } ],
+    "stageKey" : "routing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "cafb3a72-47f3-4e61-b315-aaaa69859811"
+    } ],
+    "stageKey" : "transport"
+  } ],
+  "policyScope" : "SERVICE",
+  "active" : false,
+  "global" : false,
+  "systemPolicy" : false
+}

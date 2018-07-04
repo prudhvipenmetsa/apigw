@@ -1,0 +1,11 @@
+{
+  "id" : "fe8447fb-ebc0-42fc-9be3-ab069b1166ab",
+  "name" : "GoldServicePackage",
+  "version" : "1.0",
+  "deprecated" : false,
+  "apiIds" : [ "a366ccad-e87d-4244-bb22-61987d92864f" ],
+  "planIds" : [ "27463f73-37b2-41d3-acec-f9de3c209b4f" ],
+  "publishedPortals" : [ ],
+  "policyIds" : [ "2358b460-4a05-4ca6-be1f-3fbd1268ad4c" ],
+  "active" : true
+}

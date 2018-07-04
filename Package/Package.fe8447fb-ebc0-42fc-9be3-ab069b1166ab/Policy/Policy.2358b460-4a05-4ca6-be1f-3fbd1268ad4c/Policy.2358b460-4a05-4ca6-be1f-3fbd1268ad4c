@@ -1,0 +1,26 @@
+{
+  "id" : "2358b460-4a05-4ca6-be1f-3fbd1268ad4c",
+  "names" : [ {
+    "value" : "GoldServicePackage",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "Default policy for the package ",
+    "locale" : "English"
+  } ],
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "ce601d54-18ec-4062-9f83-ec35e049063b"
+    } ],
+    "stageKey" : "IAM"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "24fb23ab-a44c-4315-a8a1-53416165e371"
+    } ],
+    "stageKey" : "LMT"
+  } ],
+  "policyScope" : "PACKAGE",
+  "active" : false,
+  "global" : false,
+  "systemPolicy" : false
+}

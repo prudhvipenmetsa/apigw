@@ -1,0 +1,24 @@
+{
+  "id" : "bdc09aa0-8933-4c9d-ae8b-9c66478556d5",
+  "names" : [ {
+    "value" : "DemoOrder_scopePolicy",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "1992ba04-05ec-413a-ae7b-cb1568b6ba8e"
+    } ],
+    "stageKey" : "IAM"
+  } ],
+  "policyScope" : "SCOPE",
+  "active" : false,
+  "global" : false,
+  "systemPolicy" : false
+}

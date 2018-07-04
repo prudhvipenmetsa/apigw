@@ -1,0 +1,51 @@
+{
+  "applicationID" : "055923b9-ed2e-4b01-835c-d79a002c6136",
+  "name" : "windows.prudhvi.com",
+  "owner" : "Administrator",
+  "identifiers" : [ {
+    "id" : "3263aeef-db50-450a-a9e9-7bedb73821c5",
+    "key" : "hostNameAddress",
+    "swaggerName" : "",
+    "swaggerValue" : [ ],
+    "namedValues" : [ {
+      "name" : "Hostname",
+      "values" : [ "windows.prudhvi.com" ]
+    } ]
+  }, {
+    "id" : "e67c53f4-c7bd-479f-b799-1dc1682fe3eb",
+    "key" : "ipAddressRange",
+    "swaggerName" : "",
+    "swaggerValue" : [ ],
+    "namedValues" : [ {
+      "name" : "IP Addresses",
+      "values" : [ "192.168.56.1-192.168.56.1" ]
+    } ]
+  } ],
+  "contactEmails" : [ ],
+  "accessTokens" : {
+    "apiAccessKey" : {
+      "apiAccessKey" : "cbbe0933b1e9e6a48345d2f42f03c2359d46a47e8578c21a5196751fcfda23e2"
+    },
+    "oauth2Token" : {
+      "type" : "confidential",
+      "clientId" : "151b0570-0390-434f-a009-58586ae31469",
+      "clientSecret" : "********************************",
+      "clientName" : "windows.prudhvi.com-12180eb2-a55b-4de8-a584-be2c6b3abbec",
+      "scopes" : [ "8d3759ea-3892-4f66-9804-a11cf9386152", "7a8e7730-8ad3-4830-8489-143d43ad75fe", "456bd0ce-5538-4fdc-8fe6-48c0ead258b5", "c564b3b6-adc3-4934-85a6-da8b0b52d054", "a366ccad-e87d-4244-bb22-61987d92864f" ],
+      "expirationInterval" : "3600",
+      "refreshCount" : "0",
+      "accessTokenRequestURI" : [ ],
+      "redirectUris" : [ "https://placeholder_redirect_uri" ]
+    }
+  },
+  "creationDate" : "2018-06-22 10:21:28 GMT",
+  "lastModified" : "2018-06-22 17:18:42 GMT",
+  "siteURLs" : [ ],
+  "jsOrigins" : [ ],
+  "version" : "1.0",
+  "token_lifetime" : "3600",
+  "token_refresh_count" : "0",
+  "redirectUris" : [ "https://placeholder_redirect_uri" ],
+  "isSuspended" : false,
+  "subscription" : false
+}

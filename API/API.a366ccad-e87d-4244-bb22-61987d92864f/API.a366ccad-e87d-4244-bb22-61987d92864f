@@ -1,0 +1,234 @@
+{
+  "type" : "REST",
+  "apiDefinition" : {
+    "type" : "rest",
+    "info" : {
+      "vendorExtensions" : { },
+      "version" : "1.0",
+      "title" : "DemoOrder"
+    },
+    "host" : "webm101.prudhvi.com:5555",
+    "basePath" : "/rad/APIGatewayDemo.rad:orderRad",
+    "schemes" : [ "http" ],
+    "consumes" : [ "application/json" ],
+    "produces" : [ "application/json" ],
+    "security" : [ ],
+    "paths" : {
+      "/order/{orderId}" : {
+        "get" : {
+          "operationId" : "orderorderId_GET_1",
+          "parameters" : [ {
+            "in" : "path",
+            "name" : "orderId",
+            "required" : true,
+            "type" : "string"
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "Successful",
+              "schema" : {
+                "application/json" : {
+                  "type" : "ref",
+                  "refFormat" : "INTERNAL",
+                  "$ref" : "#/definitions/orderorderId_GET_response",
+                  "simpleRef" : "orderorderId_GET_response"
+                }
+              }
+            },
+            "401" : {
+              "description" : "Access Denied"
+            }
+          },
+          "mockedResponses" : {
+            "200" : {
+              "responseBody" : {
+                "application/json" : "{\n    \"orderId\": \"223Mock\",\n    \"order\": {\n        \"orderId\": \"223Mock\",\n        \"date\": \"2018-06-22 06:51:16\",\n        \"details\": [\n            {\n                \"item\": \"1\",\n                \"qty\": \"100\"\n            }\n        ]\n    }\n}"
+              }
+            },
+            "401" : {
+              "responseBody" : {
+                "application/json" : ""
+              }
+            }
+          },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ "apikey", "scopedemo" ]
+        },
+        "delete" : {
+          "operationId" : "orderorderId_DELETE_1",
+          "parameters" : [ {
+            "in" : "path",
+            "name" : "orderId",
+            "required" : true,
+            "type" : "string"
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "Successful",
+              "schema" : {
+                "application/json" : {
+                  "type" : "ref",
+                  "refFormat" : "INTERNAL",
+                  "$ref" : "#/definitions/orderorderId_DELETE_response",
+                  "simpleRef" : "orderorderId_DELETE_response"
+                }
+              }
+            },
+            "401" : {
+              "description" : "Access Denied"
+            }
+          },
+          "mockedResponses" : {
+            "200" : {
+              "responseBody" : {
+                "application/json" : "{\"order\":{\"date\":\"rpV\",\"details\":[{\"item\":\"wvYKujfLPn\",\"qty\":\"ecybH\"},{\"item\":\"PHkOVRHrIM\",\"qty\":\"frOaPNjskn\"}],\"orderId\":\"qQn\"}}"
+              }
+            },
+            "401" : {
+              "responseBody" : {
+                "application/json" : ""
+              }
+            }
+          },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ "iprange" ]
+        },
+        "scopes" : [ ],
+        "displayName" : "/order/{orderId}",
+        "enabled" : true
+      },
+      "/order" : {
+        "post" : {
+          "operationId" : "order_POST_2",
+          "parameters" : [ {
+            "in" : "body",
+            "name" : "order",
+            "required" : true,
+            "schema" : {
+              "application/json" : {
+                "type" : "ref",
+                "reference" : "#/definitions/Order_1_1",
+                "$ref" : "#/definitions/Order_1_1",
+                "simpleRef" : "Order_1_1",
+                "refFormat" : "INTERNAL"
+              }
+            },
+            "examples" : { }
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "Successful",
+              "schema" : {
+                "application/json" : {
+                  "type" : "ref",
+                  "refFormat" : "INTERNAL",
+                  "$ref" : "#/definitions/order_POST_response",
+                  "simpleRef" : "order_POST_response"
+                }
+              }
+            },
+            "401" : {
+              "description" : "Access Denied"
+            }
+          },
+          "mockedResponses" : {
+            "200" : {
+              "responseBody" : {
+                "application/json" : "{\"statusMessage\":\"Your order has been successfully processed\"}"
+              }
+            },
+            "401" : {
+              "responseBody" : {
+                "application/json" : ""
+              }
+            }
+          },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ]
+        },
+        "scopes" : [ ],
+        "displayName" : "/order",
+        "enabled" : true
+      }
+    },
+    "securityDefinitions" : { },
+    "definitions" : {
+      "details_2" : {
+        "schema" : "{\"type\":\"object\",\"required\":[\"item\",\"qty\"],\"properties\":{\"item\":{\"type\":\"string\",\"required\":true},\"qty\":{\"type\":\"string\",\"required\":true}}}",
+        "type" : "StringSchemaModel"
+      },
+      "details_1" : {
+        "schema" : "{\"type\":\"object\",\"required\":[\"item\",\"qty\"],\"properties\":{\"item\":{\"type\":\"string\",\"required\":true},\"qty\":{\"type\":\"string\",\"required\":true}}}",
+        "type" : "StringSchemaModel"
+      },
+      "orderorderId_DELETE_response" : {
+        "schema" : "{\"type\":\"object\",\"required\":[\"order\"],\"properties\":{\"order\":{\"type\":\"ref\",\"required\":true,\"refFormat\":\"INTERNAL\",\"$ref\":\"#/definitions/Order_1_1\",\"simpleRef\":\"Order_1_1\"}}}",
+        "type" : "StringSchemaModel"
+      },
+      "details" : {
+        "schema" : "{\"type\":\"object\",\"required\":[\"item\",\"qty\"],\"properties\":{\"item\":{\"type\":\"string\",\"required\":true},\"qty\":{\"type\":\"string\",\"required\":true}}}",
+        "type" : "StringSchemaModel"
+      },
+      "orderorderId_GET_response" : {
+        "schema" : "{\"type\":\"object\",\"required\":[\"order\"],\"properties\":{\"order\":{\"type\":\"ref\",\"required\":true,\"refFormat\":\"INTERNAL\",\"$ref\":\"#/definitions/Order_1_1\",\"simpleRef\":\"Order_1_1\"}}}",
+        "type" : "StringSchemaModel"
+      },
+      "Order_1_1" : {
+        "schema" : "{\"type\":\"object\",\"required\":[\"date\",\"details\",\"orderId\"],\"properties\":{\"date\":{\"type\":\"string\",\"required\":true},\"details\":{\"type\":\"array\",\"required\":true,\"items\":{\"type\":\"ref\",\"refFormat\":\"INTERNAL\",\"$ref\":\"#/definitions/details_2\",\"simpleRef\":\"details_2\"}},\"orderId\":{\"type\":\"string\",\"required\":true}}}",
+        "type" : "StringSchemaModel"
+      },
+      "order_POST_response" : {
+        "schema" : "{\"type\":\"object\",\"required\":[\"statusMessage\"],\"properties\":{\"statusMessage\":{\"type\":\"string\",\"required\":true}}}",
+        "type" : "StringSchemaModel"
+      }
+    },
+    "parameters" : { },
+    "baseUriParameters" : [ ],
+    "externalDocs" : [ ],
+    "servers" : [ ],
+    "type" : "rest"
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "http://webm101.prudhvi.com:5555/rad/APIGatewayDemo.rad:orderRad",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "DemoOrder",
+  "apiVersion" : "2.0",
+  "maturityState" : "Beta",
+  "isActive" : true,
+  "type" : "REST",
+  "owner" : "approver1",
+  "policies" : [ "67798bd8-67e0-474d-8a00-5f75e3c76a20" ],
+  "referencedFiles" : {
+    "ordersapi.swaggeer.json" : "---\nswagger: \"2.0\"\ninfo:\n  version: \"1.0\"\n  title: \"DemoOrder\"\nhost: \"webm101.prudhvi.com:5555\"\nbasePath: \"/rad/APIGatewayDemo.rad:orderRad\"\nschemes:\n- \"http\"\nconsumes:\n- \"application/json\"\nproduces:\n- \"application/json\"\npaths:\n  /order/{orderId}:\n    get:\n      operationId: \"orderorderId_GET_1\"\n      parameters:\n      - name: \"orderId\"\n        in: \"path\"\n        required: true\n        type: \"string\"\n      responses:\n        200:\n          description: \"Successful\"\n          schema:\n            $ref: \"#/definitions/orderorderId_GET_response\"\n        401:\n          description: \"Access Denied\"\n    delete:\n      operationId: \"orderorderId_DELETE_1\"\n      parameters:\n      - name: \"orderId\"\n        in: \"path\"\n        required: true\n        type: \"string\"\n      responses:\n        200:\n          description: \"Successful\"\n          schema:\n            $ref: \"#/definitions/orderorderId_DELETE_response\"\n        401:\n          description: \"Access Denied\"\n  /order:\n    post:\n      operationId: \"order_POST_2\"\n      parameters:\n      - in: \"body\"\n        name: \"order\"\n        required: true\n        schema:\n          $ref: \"#/definitions/Order_1_1\"\n      responses:\n        200:\n          description: \"Successful\"\n          schema:\n            $ref: \"#/definitions/order_POST_response\"\n        401:\n          description: \"Access Denied\"\ndefinitions:\n  details_1:\n    required:\n    - \"item\"\n    - \"qty\"\n    properties:\n      item:\n        type: \"string\"\n      qty:\n        type: \"string\"\n  details_2:\n    required:\n    - \"item\"\n    - \"qty\"\n    properties:\n      item:\n        type: \"string\"\n      qty:\n        type: \"string\"\n  Order_1_1:\n    required:\n    - \"date\"\n    - \"details\"\n    - \"orderId\"\n    properties:\n      date:\n        type: \"string\"\n      orderId:\n        type: \"string\"\n      details:\n        type: \"array\"\n        items:\n          $ref: \"#/definitions/details_2\"\n  orderorderId_GET_response:\n    required:\n    - \"order\"\n    properties:\n      order:\n        $ref: \"#/definitions/Order_1_1\"\n  details:\n    required:\n    - \"item\"\n    - \"qty\"\n    properties:\n      item:\n        type: \"string\"\n      qty:\n        type: \"string\"\n  orderorderId_DELETE_response:\n    required:\n    - \"order\"\n    properties:\n      order:\n        $ref: \"#/definitions/Order_1_1\"\n  order_POST_response:\n    required:\n    - \"statusMessage\"\n    properties:\n      statusMessage:\n        type: \"string\"\n"
+  },
+  "scopes" : [ {
+    "name" : "apikey",
+    "description" : "",
+    "oAuth2ScopeName" : "7a8e7730-8ad3-4830-8489-143d43ad75fe",
+    "policies" : [ "e79a590a-ab14-4eb8-bada-fe4aca37aabe" ]
+  }, {
+    "name" : "iprange",
+    "description" : "",
+    "oAuth2ScopeName" : "456bd0ce-5538-4fdc-8fe6-48c0ead258b5",
+    "policies" : [ "bdc09aa0-8933-4c9d-ae8b-9c66478556d5" ]
+  }, {
+    "name" : "scopedemo",
+    "description" : "",
+    "oAuth2ScopeName" : "c564b3b6-adc3-4934-85a6-da8b0b52d054",
+    "policies" : [ "b50cf008-cdb5-40c3-bef5-3f73ddb35997" ]
+  } ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2018-06-21 15:03:47 GMT",
+  "lastModified" : "2018-06-22 17:28:32 GMT",
+  "systemVersion" : 1,
+  "mockService" : {
+    "enableMock" : false
+  },
+  "id" : "a366ccad-e87d-4244-bb22-61987d92864f"
+}

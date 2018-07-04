@@ -1,0 +1,58 @@
+{
+  "id" : "6b3dcc03-b72f-4582-96e8-885a28de9705",
+  "names" : [ {
+    "value" : "Monitor Service Level Agreement",
+    "locale" : "en"
+  } ],
+  "templateKey" : "monitorSLA",
+  "parameters" : [ {
+    "templateKey" : "alertIntervalUnit",
+    "values" : [ "minutes" ]
+  }, {
+    "templateKey" : "alertFrequency",
+    "values" : [ "always" ]
+  }, {
+    "templateKey" : "alertMessage",
+    "values" : [ "Service is running too long" ]
+  }, {
+    "templateKey" : "consumerIds",
+    "values" : [ "AnyConsumer" ]
+  }, {
+    "templateKey" : "monitorRules",
+    "parameters" : [ {
+      "templateKey" : "monitorRuleName",
+      "values" : [ "avgResponseTime" ]
+    }, {
+      "templateKey" : "monitorRuleOperator",
+      "values" : [ "GT" ]
+    }, {
+      "templateKey" : "value",
+      "values" : [ "20" ]
+    } ]
+  }, {
+    "templateKey" : "destination",
+    "parameters" : [ {
+      "templateKey" : "destinationType",
+      "values" : [ "GATEWAY" ]
+    } ]
+  }, {
+    "templateKey" : "destination",
+    "parameters" : [ {
+      "templateKey" : "destinationType",
+      "values" : [ "localLog" ]
+    }, {
+      "templateKey" : "logLevel",
+      "values" : [ "Error" ]
+    } ]
+  }, {
+    "templateKey" : "destination",
+    "parameters" : [ {
+      "templateKey" : "destinationType",
+      "values" : [ "SMTP" ]
+    }, {
+      "templateKey" : "emailTo",
+      "values" : [ "provider1@webm102.prudhvi.com" ]
+    } ]
+  } ],
+  "active" : false
+}

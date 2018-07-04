@@ -1,0 +1,17 @@
+{
+  "id" : "c84ceac1-e270-42b2-a39f-0181f2cc4a64",
+  "names" : [ {
+    "value" : "Straight Through Routing",
+    "locale" : "en"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "templateKey" : "straightThroughRouting",
+  "parameters" : [ {
+    "templateKey" : "endpointUri",
+    "values" : [ "http://webm101.prudhvi.com:5555/rad/APIGatewayDemo.rad:orderRad/${sys:resource_path}" ]
+  } ],
+  "active" : false
+}

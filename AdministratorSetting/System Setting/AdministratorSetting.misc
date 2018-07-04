@@ -1,0 +1,12 @@
+{
+  "configId" : "misc",
+  "userName" : "Administrator",
+  "internalPorts" : { },
+  "properties" : {
+    "log_level" : "info",
+    "store_log" : "true",
+    "gateway_timeout" : "60",
+    "log_storage_interval" : "",
+    "log_storage_type" : "Burst Mode"
+  }
+}

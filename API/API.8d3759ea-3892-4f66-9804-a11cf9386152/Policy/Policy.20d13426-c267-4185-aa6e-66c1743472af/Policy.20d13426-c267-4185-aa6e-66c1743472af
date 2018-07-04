@@ -1,0 +1,38 @@
+{
+  "id" : "20d13426-c267-4185-aa6e-66c1743472af",
+  "names" : [ {
+    "value" : "Default Policy for API APIGatewayDemo.ws.math",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "4e46d2d3-fa2a-4b91-be79-96947c550a78"
+    }, {
+      "enforcementObjectId" : "d415779d-4854-4d45-95a3-3adba6db30db"
+    } ],
+    "stageKey" : "routing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "0f2bf551-a0a2-4a3a-8608-17bef5995914"
+    }, {
+      "enforcementObjectId" : "843f856d-618a-4b68-8761-c369d79b0e0e"
+    } ],
+    "stageKey" : "LMT"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "35a80146-7096-439b-8d91-75966212960c"
+    } ],
+    "stageKey" : "transport"
+  } ],
+  "policyScope" : "SERVICE",
+  "active" : false,
+  "global" : false,
+  "systemPolicy" : false
+}

@@ -1,0 +1,8 @@
+{
+  "configId" : "dashboard",
+  "userName" : "Administrator",
+  "internalPorts" : { },
+  "properties" : {
+    "dashboardInstance" : "http://<localhost>:9405"
+  }
+}

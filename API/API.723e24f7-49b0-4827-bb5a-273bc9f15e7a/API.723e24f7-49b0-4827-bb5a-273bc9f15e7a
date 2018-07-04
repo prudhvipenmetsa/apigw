@@ -1,0 +1,35 @@
+{
+  "type" : "WEBSOCKET",
+  "apiDefinition" : {
+    "type" : "websocket",
+    "type" : "websocket",
+    "nativeUri" : [ "ws://webm101.prudhvi.com:5554/prudhvi/websocket/processData" ],
+    "messages" : [ {
+      "origin" : "Client",
+      "type" : "Text",
+      "messagePayload" : "sample websocket input",
+      "messageDescription" : "input to websocket service"
+    } ],
+    "parameters" : { },
+    "uri" : [ "ws://webm101.prudhvi.com:5554/prudhvi/websocket/processData" ]
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "ws://webm101.prudhvi.com:5554/prudhvi/websocket/processData",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "WebsocketTestAPI",
+  "apiVersion" : "1.0",
+  "maturityState" : "Beta",
+  "isActive" : false,
+  "type" : "WEBSOCKET",
+  "owner" : "Administrator",
+  "policies" : [ "78306131-77ad-4e38-a663-8434361ef2f2" ],
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2018-06-22 10:07:31 GMT",
+  "lastModified" : "2018-06-22 10:08:56 GMT",
+  "systemVersion" : 1,
+  "id" : "723e24f7-49b0-4827-bb5a-273bc9f15e7a"
+}

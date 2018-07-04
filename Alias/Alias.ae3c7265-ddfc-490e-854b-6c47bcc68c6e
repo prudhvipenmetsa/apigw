@@ -1,0 +1,20 @@
+{
+  "type" : "clientMetadataMapping",
+  "id" : "ae3c7265-ddfc-490e-854b-6c47bcc68c6e",
+  "name" : "PingFederate",
+  "type" : "clientMetadataMapping",
+  "owner" : "Administrator",
+  "providerName" : "PingFederate",
+  "implNames" : {
+    "grant_types" : "grantTypes",
+    "logo_uri" : "logoUrl",
+    "scope" : "restrictedScopes",
+    "client_secret" : "secret",
+    "redirect_uris" : "redirectUris",
+    "client_name" : "name",
+    "client_id" : "clientId"
+  },
+  "extendedValues" : {
+    "restrictScopes" : "true"
+  }
+}

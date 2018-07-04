@@ -1,0 +1,19 @@
+{
+  "id" : "b50cf008-cdb5-40c3-bef5-3f73ddb35997",
+  "names" : [ {
+    "value" : "DemoOrder_scopePolicy",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ ],
+  "policyScope" : "SCOPE",
+  "active" : false,
+  "global" : false,
+  "systemPolicy" : false
+}

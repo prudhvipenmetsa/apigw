@@ -1,0 +1,13 @@
+{
+  "id" : "c7a6bac5-95c4-412a-b62c-2a8a2c280bd1",
+  "names" : [ {
+    "value" : "Straight Through Routing",
+    "locale" : "en"
+  } ],
+  "templateKey" : "straightThroughRouting",
+  "parameters" : [ {
+    "templateKey" : "endpointUri",
+    "values" : [ "ws://webm101.prudhvi.com:5554/prudhvi/websocket/processData" ]
+  } ],
+  "active" : false
+}

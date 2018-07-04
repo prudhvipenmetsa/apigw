@@ -1,0 +1,17 @@
+{
+  "id" : "27463f73-37b2-41d3-acec-f9de3c209b4f",
+  "name" : "DemoOrderGoldPlan",
+  "version" : "1.0",
+  "deprecated" : false,
+  "isProtected" : false,
+  "terms" : "No term",
+  "license" : "No License",
+  "policies" : [ "a0735560-ce47-40f0-b4ba-0a905aa44570" ],
+  "cost" : {
+    "value" : "5"
+  },
+  "quota" : {
+    "enforcementPolicy" : "cb52f018-9270-42ba-88f8-aeefeb22a27e"
+  },
+  "protected" : false
+}

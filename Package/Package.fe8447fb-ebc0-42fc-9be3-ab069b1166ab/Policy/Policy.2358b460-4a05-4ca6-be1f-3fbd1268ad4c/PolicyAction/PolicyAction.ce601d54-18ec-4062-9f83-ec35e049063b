@@ -1,0 +1,24 @@
+{
+  "id" : "ce601d54-18ec-4062-9f83-ec35e049063b",
+  "names" : [ {
+    "value" : "Identify & Authorize Application",
+    "locale" : "en"
+  } ],
+  "descriptions" : [ {
+    "value" : "Default evaluate policy action for the package Evaluate policy action for the package GoldServicePackage",
+    "locale" : "English"
+  } ],
+  "templateKey" : "evaluatePolicy",
+  "parameters" : [ {
+    "templateKey" : "IdentificationRule",
+    "values" : [ "identificationType" ],
+    "parameters" : [ {
+      "templateKey" : "identificationType",
+      "values" : [ "apiKey" ]
+    } ]
+  }, {
+    "templateKey" : "logicalConnector",
+    "values" : [ "OR" ]
+  } ],
+  "active" : false
+}

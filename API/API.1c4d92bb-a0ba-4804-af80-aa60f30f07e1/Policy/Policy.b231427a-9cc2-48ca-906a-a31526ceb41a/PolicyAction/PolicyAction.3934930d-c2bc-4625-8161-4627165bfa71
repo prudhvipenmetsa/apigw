@@ -1,0 +1,13 @@
+{
+  "id" : "3934930d-c2bc-4625-8161-4627165bfa71",
+  "names" : [ {
+    "value" : "Set Media Type",
+    "locale" : "en"
+  } ],
+  "templateKey" : "setMediaType",
+  "parameters" : [ {
+    "templateKey" : "defaultContentType",
+    "values" : [ "application/json" ]
+  } ],
+  "active" : false
+}

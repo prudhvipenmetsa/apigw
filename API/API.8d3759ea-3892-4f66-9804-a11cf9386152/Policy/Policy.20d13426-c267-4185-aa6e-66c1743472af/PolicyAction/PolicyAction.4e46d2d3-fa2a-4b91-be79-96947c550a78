@@ -1,0 +1,34 @@
+{
+  "id" : "4e46d2d3-fa2a-4b91-be79-96947c550a78",
+  "names" : [ {
+    "value" : "Load Balancer Routing",
+    "locale" : "en"
+  } ],
+  "templateKey" : "loadBalancerRouting",
+  "parameters" : [ {
+    "templateKey" : "lbRouteTo",
+    "parameters" : [ {
+      "templateKey" : "endpointUri",
+      "values" : [ "http://webm101.prudhvi.com:5555/ws/APIGatewayDemo.ws:math/APIGatewayDemo_ws_math_Port" ]
+    }, {
+      "templateKey" : "soapOptimize",
+      "values" : [ "None" ]
+    }, {
+      "templateKey" : "passSecurityHeaders",
+      "values" : [ "false" ]
+    } ]
+  }, {
+    "templateKey" : "lbRouteTo",
+    "parameters" : [ {
+      "templateKey" : "endpointUri",
+      "values" : [ "http://webm102.prudhvi.com:5555/ws/APIGatewayDemo.ws:math/APIGatewayDemo_ws_math_Port" ]
+    }, {
+      "templateKey" : "soapOptimize",
+      "values" : [ "None" ]
+    }, {
+      "templateKey" : "passSecurityHeaders",
+      "values" : [ "false" ]
+    } ]
+  } ],
+  "active" : false
+}

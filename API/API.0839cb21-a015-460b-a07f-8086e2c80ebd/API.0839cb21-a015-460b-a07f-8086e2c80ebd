@@ -1,0 +1,144 @@
+{
+  "type" : "REST",
+  "apiDefinition" : {
+    "type" : "rest",
+    "info" : {
+      "version" : "1.0",
+      "title" : "address"
+    },
+    "host" : "webm101.prudhvi.com:5555",
+    "basePath" : "/address",
+    "schemes" : [ "http" ],
+    "security" : [ ],
+    "paths" : {
+      "/address" : {
+        "post" : {
+          "parameters" : [ {
+            "schema" : {
+              "application/json" : {
+                "reference" : "#/definitions/address",
+                "simpleRef" : "address",
+                "refFormat" : "INTERNAL",
+                "type" : "ref",
+                "$ref" : "#/definitions/address"
+              }
+            },
+            "examples" : { },
+            "in" : "body",
+            "required" : false
+          } ],
+          "responses" : {
+            "200" : {
+              "schema" : {
+                "application/json" : {
+                  "type" : "ref",
+                  "refFormat" : "INTERNAL",
+                  "$ref" : "#/definitions/response",
+                  "simpleRef" : "response"
+                }
+              }
+            },
+            "401" : {
+              "description" : "unauthorized response code"
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ]
+        },
+        "scopes" : [ ],
+        "displayName" : "/address",
+        "description" : "save the address",
+        "enabled" : true
+      },
+      "/address/{id}" : {
+        "get" : {
+          "parameters" : [ {
+            "in" : "query",
+            "name" : "id",
+            "type" : "string",
+            "required" : false
+          } ],
+          "responses" : {
+            "200" : {
+              "schema" : {
+                "application/json" : {
+                  "type" : "ref",
+                  "refFormat" : "INTERNAL",
+                  "$ref" : "#/definitions/address",
+                  "simpleRef" : "address"
+                }
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ]
+        },
+        "delete" : {
+          "parameters" : [ {
+            "in" : "query",
+            "name" : "id",
+            "type" : "string",
+            "required" : false
+          } ],
+          "responses" : {
+            "200" : {
+              "schema" : {
+                "application/json" : {
+                  "type" : "ref",
+                  "refFormat" : "INTERNAL",
+                  "$ref" : "#/definitions/response",
+                  "simpleRef" : "response"
+                }
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ]
+        },
+        "scopes" : [ ],
+        "displayName" : "/address/{id}",
+        "enabled" : true
+      }
+    },
+    "securityDefinitions" : { },
+    "definitions" : {
+      "address" : {
+        "schema" : "{\r\n    \"title\": \"Address\",\r\n    \"type\": \"object\",\r\n    \"properties\": {\r\n        \"address1\": {\r\n            \"type\": \"string\"\r\n        },\r\n        \"address2\": {\r\n            \"type\": \"string\"\r\n        },\r\n\t\t\"city\": {\r\n            \"type\": \"string\"\r\n        },\r\n\t\t\"state\": {\r\n            \"type\": \"string\"\r\n        },\r\n        \"zipcode\": {\r\n            \"description\": \"5 digit zipcode\",\r\n            \"type\": \"integer\",\r\n            \"minimum\": 5\r\n        }\r\n    },\r\n    \"required\": [\"addres1\", \"city\",\"state\",\"zipcode\"]\r\n}",
+        "type" : "StringSchemaModel"
+      },
+      "response" : {
+        "schema" : " {\n      \"type\" : \"object\",\n      \"required\" : [ \"statusMessage\" ],\n      \"properties\" : {\n        \"statusMessage\" : {\n          \"type\" : \"string\"\n        }\n      }",
+        "type" : "StringSchemaModel"
+      }
+    },
+    "parameters" : { },
+    "baseUriParameters" : [ ],
+    "externalDocs" : [ ],
+    "servers" : [ ],
+    "type" : "rest"
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "http://webm101.prudhvi.com:5555/address",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "address",
+  "apiVersion" : "1.0",
+  "maturityState" : "Beta",
+  "isActive" : true,
+  "type" : "REST",
+  "owner" : "Administrator",
+  "policies" : [ "1c2359d6-2a9f-40eb-8988-7494d6cf17d0" ],
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2018-06-22 16:53:17 GMT",
+  "systemVersion" : 1,
+  "id" : "0839cb21-a015-460b-a07f-8086e2c80ebd"
+}

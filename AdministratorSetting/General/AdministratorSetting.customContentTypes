@@ -1,0 +1,8 @@
+{
+  "configId" : "customContentTypes",
+  "userName" : "approver1",
+  "internalPorts" : { },
+  "properties" : {
+    "sag/json" : "application/json"
+  }
+}

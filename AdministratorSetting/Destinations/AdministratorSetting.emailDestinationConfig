@@ -1,0 +1,26 @@
+{
+  "configId" : "emailDestinationConfig",
+  "userName" : "Administrator",
+  "internalPorts" : { },
+  "properties" : {
+    "monitorSPContent" : "",
+    "monitorSLASubject" : "",
+    "defaultEmailCharset" : "",
+    "serviceEmail" : "",
+    "monitorSPSubject" : "",
+    "monitorSLAContent" : "",
+    "testRecipient" : "provider1@webm102.prudhvi.com",
+    "userName" : "prudhvi@webm102.prudhvi.com",
+    "truststoreAlias" : "",
+    "fromEmail" : "prudhvi@webm102.prudhvi.com",
+    "internalEmail" : "",
+    "throttlingContent" : "",
+    "password" : "********************************",
+    "smtpServer" : "webm101.prudhvi.com",
+    "throttlingSubject" : "",
+    "port" : "2525",
+    "logInvocationSubject" : "",
+    "logInvocationContent" : "",
+    "tls" : "none"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id" : "a0735560-ce47-40f0-b4ba-0a905aa44570",
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "b28c17db-c5ea-4168-a1cc-b246d704761f"
+    } ],
+    "stageKey" : "throttle"
+  } ],
+  "active" : false,
+  "global" : false,
+  "systemPolicy" : false
+}

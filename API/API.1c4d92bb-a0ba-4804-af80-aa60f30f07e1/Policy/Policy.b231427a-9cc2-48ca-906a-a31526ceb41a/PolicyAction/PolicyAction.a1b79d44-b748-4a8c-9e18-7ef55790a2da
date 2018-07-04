@@ -1,0 +1,22 @@
+{
+  "id" : "a1b79d44-b748-4a8c-9e18-7ef55790a2da",
+  "names" : [ {
+    "value" : "Outbound Authentication - Transport",
+    "locale" : "en"
+  } ],
+  "templateKey" : "outboundTransportAuthentication",
+  "parameters" : [ {
+    "templateKey" : "transportSecurity",
+    "parameters" : [ {
+      "templateKey" : "authType",
+      "values" : [ "OAUTH2" ]
+    }, {
+      "templateKey" : "authMode",
+      "values" : [ "NEW" ]
+    }, {
+      "templateKey" : "oauth2Token",
+      "values" : [ "********************************" ]
+    } ]
+  } ],
+  "active" : false
+}

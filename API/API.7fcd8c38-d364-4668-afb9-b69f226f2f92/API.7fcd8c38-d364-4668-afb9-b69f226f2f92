@@ -1,0 +1,87 @@
+{
+  "type" : "REST",
+  "apiDefinition" : {
+    "type" : "rest",
+    "info" : {
+      "version" : "1.0",
+      "title" : "contacts"
+    },
+    "host" : "webm101.prudhvi.com:5555",
+    "basePath" : "/rad/APIGatewayDemo.rad:contacts2Rad",
+    "schemes" : [ "http" ],
+    "security" : [ ],
+    "paths" : {
+      "/person/{id}" : {
+        "get" : {
+          "responses" : {
+            "200" : {
+              "schema" : {
+                "application/json" : {
+                  "type" : "ref",
+                  "refFormat" : "INTERNAL",
+                  "$ref" : "#/definitions/address",
+                  "simpleRef" : "address"
+                }
+              }
+            }
+          },
+          "mockedResponses" : { },
+          "mockedConditionsBasedCustomResponsesList" : [ ],
+          "enabled" : true,
+          "scopes" : [ ]
+        },
+        "parameters" : [ {
+          "default" : null,
+          "in" : "path",
+          "repeat" : false,
+          "name" : "id",
+          "description" : null,
+          "type" : "string",
+          "required" : false
+        } ],
+        "scopes" : [ ],
+        "displayName" : "/person/{id}",
+        "enabled" : true
+      }
+    },
+    "securityDefinitions" : { },
+    "definitions" : {
+      "address" : {
+        "schema" : "{\r\n    \"title\": \"Address\",\r\n    \"type\": \"object\",\r\n    \"properties\": {\r\n        \"address1\": {\r\n            \"type\": \"string\"\r\n        },\r\n        \"address2\": {\r\n            \"type\": \"string\"\r\n        },\r\n\t\t\"city\": {\r\n            \"type\": \"string\"\r\n        },\r\n\t\t\"state\": {\r\n            \"type\": \"string\"\r\n        },\r\n        \"zipcode\": {\r\n            \"description\": \"5 digit zipcode\",\r\n            \"type\": \"integer\",\r\n            \"minimum\": 5\r\n        }\r\n    },\r\n    \"required\": [\"addres1\", \"city\",\"state\",\"zipcode\"]\r\n}",
+        "type" : "StringSchemaModel"
+      },
+      "person" : {
+        "schema" : "{\r\n    \"title\": \"Person\",\r\n    \"type\": \"object\",\r\n    \"properties\": {\r\n        \"firstName\": {\r\n            \"type\": \"string\"\r\n        },\r\n        \"lastName\": {\r\n            \"type\": \"string\"\r\n        },\r\n        \"age\": {\r\n            \"type\": \"integer\",\r\n            \"minimum\": 0\r\n        }\r\n    },\r\n    \"required\": [\"firstName\", \"lastName\"]\r\n}",
+        "type" : "StringSchemaModel"
+      },
+      "responseMessage" : {
+        "schema" : "\t\n {\"type\":\"object\",\"required\":[\"statusMessage\"],\"properties\":{\"statusMessage\":{\"type\":\"string\",\"required\":true}}}",
+        "type" : "StringSchemaModel"
+      }
+    },
+    "parameters" : { },
+    "baseUriParameters" : [ ],
+    "externalDocs" : [ ],
+    "servers" : [ ],
+    "type" : "rest"
+  },
+  "nativeEndpoint" : [ {
+    "passSecurityHeaders" : true,
+    "uri" : "http://webm101.prudhvi.com:5555/rad/APIGatewayDemo.rad:contacts2Rad",
+    "connectionTimeoutDuration" : 0,
+    "alias" : false
+  } ],
+  "apiName" : "contacts",
+  "apiVersion" : "1.0",
+  "maturityState" : "Beta",
+  "isActive" : true,
+  "type" : "REST",
+  "owner" : "Administrator",
+  "policies" : [ "6e837dbd-7c70-4e3c-9e2c-4cf1cc7d1174" ],
+  "scopes" : [ ],
+  "publishedPortals" : [ ],
+  "creationDate" : "2018-06-22 12:44:41 GMT",
+  "lastModified" : "2018-06-22 13:57:27 GMT",
+  "systemVersion" : 1,
+  "id" : "7fcd8c38-d364-4668-afb9-b69f226f2f92"
+}

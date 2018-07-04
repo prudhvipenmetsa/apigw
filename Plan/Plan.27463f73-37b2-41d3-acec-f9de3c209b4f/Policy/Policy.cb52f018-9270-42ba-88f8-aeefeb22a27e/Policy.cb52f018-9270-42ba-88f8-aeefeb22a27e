@@ -1,0 +1,12 @@
+{
+  "id" : "cb52f018-9270-42ba-88f8-aeefeb22a27e",
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "70e62e52-6b37-41b5-bf25-63ac8a393ad1"
+    } ],
+    "stageKey" : "monitorSLA"
+  } ],
+  "active" : false,
+  "global" : false,
+  "systemPolicy" : false
+}

@@ -1,0 +1,16 @@
+{
+  "id" : "7889aaea-17c5-4774-9b9f-01cea7692768",
+  "names" : [ {
+    "value" : "Quota for plan DemoOrderGoldPlan",
+    "locale" : "en"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "en"
+  } ],
+  "policyEnforcements" : [ ],
+  "policyScope" : "PACKAGE",
+  "active" : false,
+  "global" : false,
+  "systemPolicy" : false
+}

@@ -1,0 +1,38 @@
+{
+  "id" : "b231427a-9cc2-48ca-906a-a31526ceb41a",
+  "names" : [ {
+    "value" : "Default Policy for API Googe",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "scope" : {
+    "scopeConditions" : [ ]
+  },
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "07610fe7-7332-4105-85bb-ef64efc654c3"
+    }, {
+      "enforcementObjectId" : "a1b79d44-b748-4a8c-9e18-7ef55790a2da"
+    } ],
+    "stageKey" : "routing"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "f54196f7-44bc-4b9e-9b22-af4ba2fd6022"
+    } ],
+    "stageKey" : "IAM"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "b2005d24-067d-4aef-990d-c42de0536127"
+    }, {
+      "enforcementObjectId" : "3934930d-c2bc-4625-8161-4627165bfa71"
+    } ],
+    "stageKey" : "transport"
+  } ],
+  "policyScope" : "SERVICE",
+  "active" : false,
+  "global" : false,
+  "systemPolicy" : false
+}

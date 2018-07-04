@@ -1,0 +1,60 @@
+{
+  "applicationID" : "7c06d162-c082-4dbd-9ea5-c940ced65b30",
+  "name" : "DemoClient1",
+  "owner" : "approver1",
+  "identifiers" : [ {
+    "id" : "c75f2e91-789d-4b43-83f2-bdf2e05bcc4e",
+    "key" : "httpBasicAuth",
+    "swaggerName" : "",
+    "swaggerValue" : [ ],
+    "namedValues" : [ {
+      "name" : "Username",
+      "values" : [ "provider1" ]
+    } ]
+  }, {
+    "id" : "3b39e05b-3c54-4b05-b7f9-8cc885427129",
+    "key" : "hostNameAddress",
+    "swaggerName" : "",
+    "swaggerValue" : [ ],
+    "namedValues" : [ {
+      "name" : "Hostname",
+      "values" : [ "windows.prudhvi.com" ]
+    } ]
+  }, {
+    "id" : "5177ba71-1634-4e31-a2e1-be8628f0366e",
+    "key" : "ipAddressRange",
+    "swaggerName" : "",
+    "swaggerValue" : [ ],
+    "namedValues" : [ {
+      "name" : "IP Addresses",
+      "values" : [ "192.168.56.2-192.168.56.255" ]
+    } ]
+  } ],
+  "contactEmails" : [ ],
+  "accessTokens" : {
+    "apiAccessKey" : {
+      "apiAccessKey" : "7357e05abfaa7660b76d01bdce888a4b47e3c60d5adc76d3db2dc8f39169b226"
+    },
+    "oauth2Token" : {
+      "type" : "confidential",
+      "clientId" : "554e670c-e0e2-4596-9d64-9440fcba8727",
+      "clientSecret" : "********************************",
+      "clientName" : "DemoClient1-85c71183-3546-4301-b059-8224bf241f47",
+      "scopes" : [ "1c4d92bb-a0ba-4804-af80-aa60f30f07e1", "8d3759ea-3892-4f66-9804-a11cf9386152", "a366ccad-e87d-4244-bb22-61987d92864f", "7a8e7730-8ad3-4830-8489-143d43ad75fe", "456bd0ce-5538-4fdc-8fe6-48c0ead258b5", "c564b3b6-adc3-4934-85a6-da8b0b52d054" ],
+      "expirationInterval" : "3600",
+      "refreshCount" : "0",
+      "accessTokenRequestURI" : [ ],
+      "redirectUris" : [ "https://placeholder_redirect_uri" ]
+    }
+  },
+  "creationDate" : "2018-06-21 12:53:51 GMT",
+  "lastModified" : "2018-06-22 10:20:43 GMT",
+  "siteURLs" : [ ],
+  "jsOrigins" : [ ],
+  "version" : "1.0",
+  "token_lifetime" : "3600",
+  "token_refresh_count" : "0",
+  "redirectUris" : [ "https://placeholder_redirect_uri" ],
+  "isSuspended" : false,
+  "subscription" : false
+}

@@ -1,0 +1,12 @@
+{
+  "type" : "clientMetadataMapping",
+  "id" : "17138cc7-424a-4cab-ac0f-98ea02112e22",
+  "name" : "OKTA",
+  "type" : "clientMetadataMapping",
+  "owner" : "Administrator",
+  "providerName" : "OKTA",
+  "implNames" : { },
+  "extendedValues" : {
+    "application_type" : "web"
+  }
+}

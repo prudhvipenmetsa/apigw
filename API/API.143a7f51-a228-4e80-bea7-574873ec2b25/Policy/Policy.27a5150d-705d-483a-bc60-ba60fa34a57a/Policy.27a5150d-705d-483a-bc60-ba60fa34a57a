@@ -1,0 +1,26 @@
+{
+  "id" : "27a5150d-705d-483a-bc60-ba60fa34a57a",
+  "names" : [ {
+    "value" : "Default Policy for API OrderDemo",
+    "locale" : "English"
+  } ],
+  "descriptions" : [ {
+    "value" : "",
+    "locale" : "English"
+  } ],
+  "policyEnforcements" : [ {
+    "enforcements" : [ {
+      "enforcementObjectId" : "196145de-cee5-4a69-9841-635132975883"
+    } ],
+    "stageKey" : "transport"
+  }, {
+    "enforcements" : [ {
+      "enforcementObjectId" : "c84ceac1-e270-42b2-a39f-0181f2cc4a64"
+    } ],
+    "stageKey" : "routing"
+  } ],
+  "policyScope" : "SERVICE",
+  "active" : false,
+  "global" : false,
+  "systemPolicy" : false
+}

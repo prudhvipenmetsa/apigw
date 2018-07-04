@@ -1,0 +1,11 @@
+{
+  "configId" : "loadBalancer",
+  "userName" : "approver1",
+  "internalPorts" : { },
+  "properties" : {
+    "webAppUrl" : "",
+    "websocketUrls" : [ ],
+    "httpsUrls" : [ "https://webm101.prudhvi.com:5556" ],
+    "httpUrls" : [ "http://webm101.prudhvi.com:5555" ]
+  }
+}
